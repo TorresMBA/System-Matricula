@@ -1,0 +1,5 @@
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaComun\obj\Debug\CapaComun.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaComun\bin\Debug\CapaComun.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaComun\bin\Debug\CapaComun.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaComun\obj\Debug\CapaComun.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaComun\obj\Debug\CapaComun.pdb

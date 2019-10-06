@@ -1,0 +1,11 @@
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaNegocio.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaNegocio.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaData.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaData.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\obj\Debug\CapaNegocio.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\obj\Debug\CapaNegocio.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaComun.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaMatricula\bin\Debug\CapaComun.pdb

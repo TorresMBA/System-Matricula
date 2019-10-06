@@ -1,0 +1,83 @@
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmEmpleado.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Properties.Resources.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\Matricula.exe.config
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\Matricula.exe
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\Matricula.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaNegocio.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaData.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaNegocio.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaData.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.exe
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.FrmMenu.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.FormLogin.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Login.FrmRecuperar.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmListarDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmIngApode.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmListarAlumno.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmIEAlumno.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmInfoAlum.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmVistaAlum.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.exe
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.pdb
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmVistaAlum.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmIEAlumno.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmInfoAlum.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmIngApode.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmListarAlumno.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Docente.FrmListarDocen.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Empleado.FrmEmpleado.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.FormLogin.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.FrmMenu.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Login.FrmRecuperar.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\Matricula.exe.config
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\Matricula.exe
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\Matricula.pdb
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\CapaNegocio.dll
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\CapaData.dll
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\CapaNegocio.pdb
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\bin\Debug\CapaData.pdb
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\Matricula.Properties.Resources.resources
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Desktop\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\Matricula.exe.config
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\Matricula.exe
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\Matricula.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\CapaNegocio.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\CapaData.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\CapaNegocio.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\bin\Debug\CapaData.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmVistaAlum.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmIEAlumno.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmInfoAlum.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmIngApode.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Alumno.FrmListarAlumno.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Docente.FrmListarDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Empleado.FrmEmpleado.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.FormLogin.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.FrmMenu.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Login.FrmRecuperar.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Properties.Resources.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.exe
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matricula\obj\Debug\Matricula.Docente.FrmVistaDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmInfoDocente.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmNotas.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmVistaDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmIngEmpleado.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmMatricula.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmIEDocente.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmSueldoDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Cursos.FrmCursos.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaComun.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaComun.pdb

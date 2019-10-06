@@ -1,0 +1,9 @@
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\bin\Debug\CapaData.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\bin\Debug\CapaData.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\obj\Debug\CapaData.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\obj\Debug\CapaData.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\obj\Debug\CapaData.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\obj\Debug\CapaData.csprojAssemblyReference.cache
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\bin\Debug\CapaComun.dll
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\bin\Debug\CapaComun.pdb
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\CapaData\obj\Debug\CapaData.csproj.CopyComplete
