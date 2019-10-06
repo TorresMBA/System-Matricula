@@ -49,5 +49,9 @@ namespace Matricula.Alumno {
             cboDistrito.DataSource = obj.ListarDis();
             cboDistrito.SelectedIndex = 0;
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

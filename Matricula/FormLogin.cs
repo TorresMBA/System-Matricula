@@ -45,13 +45,14 @@ namespace Matricula {
                         if(CacheLogin.Posiicion == CachePosicion.Docente) {
                             Docente.FrmMenuDocente docente = new Docente.FrmMenuDocente();
                             docente.Show();
+                            docente.FormClosed += CerrarSesion;
                             notifi1.ShowBalloonTip(200);
                             this.Hide();
                         }
                         if(CacheLogin.Posiicion == CachePosicion.Alumno) {
                             Alumno.FrmMenuAlumno alumno = new Alumno.FrmMenuAlumno();
                             alumno.Show();
-
+                            alumno.FormClosed += CerrarSesion;
                             notifi1.ShowBalloonTip(200);
                             this.Hide();
                         }
@@ -106,7 +107,8 @@ namespace Matricula {
 
         private void LinkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e) {
             Login.FrmRecuperar obj = new Login.FrmRecuperar();
-            obj.ShowDialog();
+            obj.Show();
+            this.Hide();
         }
 
         private void CerrarSesion(object sender, FormClosedEventArgs e) {

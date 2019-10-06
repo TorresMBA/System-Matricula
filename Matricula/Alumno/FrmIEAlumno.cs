@@ -76,5 +76,9 @@ namespace Matricula.Alumno {
             cboApo.DataSource = obj.ListarApoS();
             cboDistrito.SelectedIndex = 1;
         }
+
+        private void BtnSalir_Click_1(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

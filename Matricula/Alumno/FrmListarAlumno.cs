@@ -76,5 +76,9 @@ namespace Matricula.Alumno {
             CapaNegocio.CNAlumno obj = new CapaNegocio.CNAlumno();
             
         }
+
+        private void Button4_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

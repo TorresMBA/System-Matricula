@@ -13,5 +13,17 @@ namespace Matricula.Alumno {
         public FrmMenuAlumno() {
             InitializeComponent();
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e) {
+            if(MessageBox.Show("¿Desea Cerrar la Aplicacion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                Application.Exit();
+            }
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e) {
+            if(MessageBox.Show("¿Desea Cerrar Sesion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                this.Close();
+            }
+        }
     }
 }

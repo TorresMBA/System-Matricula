@@ -20,7 +20,7 @@ namespace Matricula.Docente {
         }
 
         private void BtnSalir_Click(object sender, EventArgs e) {
-
+            this.Close();
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e) {

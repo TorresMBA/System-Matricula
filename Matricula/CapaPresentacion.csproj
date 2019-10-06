@@ -201,6 +201,9 @@
     <EmbeddedResource Include="Docente\FrmListarDocen.resx">
       <DependentUpon>FrmListarDocen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Docente\FrmMenuDocente.resx">
+      <DependentUpon>FrmMenuDocente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docente\FrmNotas.resx">
       <DependentUpon>FrmNotas.cs</DependentUpon>
     </EmbeddedResource>

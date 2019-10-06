@@ -14,12 +14,8 @@ namespace Matricula.Alumno {
             InitializeComponent();
         }
 
-        private void GroupBox1_Enter(object sender, EventArgs e) {
-
-        }
-
-        private void LblTitulo_Click(object sender, EventArgs e) {
-
+        private void BtnSalir_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

@@ -90,7 +90,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // lblTurno
             // 
@@ -223,7 +222,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(425, 41);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Información del Alumno";
-            this.lblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
             // pictureBox1
             // 
@@ -252,6 +250,7 @@
             this.btnSalir.TabIndex = 17;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmInfoAlum
             // 

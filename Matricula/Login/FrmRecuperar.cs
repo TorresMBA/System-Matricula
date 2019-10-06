@@ -13,5 +13,15 @@ namespace Matricula.Login {
         public FrmRecuperar() {
             InitializeComponent();
         }
+
+        private void PictureBox2_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            FormLogin obj = new FormLogin();
+            obj.Show();
+            this.Close();
+        }
     }
 }

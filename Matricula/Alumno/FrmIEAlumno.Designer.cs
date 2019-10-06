@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIEAlumno));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblid = new System.Windows.Forms.Label();
             this.cboApo = new System.Windows.Forms.ComboBox();
             this.lblOpe = new System.Windows.Forms.Label();
             this.d = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblid = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,6 +94,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Alumno";
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Location = new System.Drawing.Point(282, 55);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(14, 19);
+            this.lblid.TabIndex = 27;
+            this.lblid.Text = "-";
             // 
             // cboApo
             // 
@@ -382,15 +391,7 @@
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(282, 55);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(14, 19);
-            this.lblid.TabIndex = 27;
-            this.lblid.Text = "-";
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // FrmIEAlumno
             // 
