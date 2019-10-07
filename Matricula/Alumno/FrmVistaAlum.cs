@@ -32,7 +32,7 @@ namespace Matricula.Alumno {
 
         private void BtnMenu_Click(object sender, EventArgs e) {
             FrmListarAlumno obj = new FrmListarAlumno();
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void FrmVistaAlum_Activated(object sender, EventArgs e) {

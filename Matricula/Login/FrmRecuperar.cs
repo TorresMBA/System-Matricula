@@ -23,5 +23,9 @@ namespace Matricula.Login {
             obj.Show();
             this.Close();
         }
+
+        private void FrmRecuperar_Load(object sender, EventArgs e) {
+
+        }
     }
 }

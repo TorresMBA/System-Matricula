@@ -294,7 +294,7 @@
             this.btnAlum.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlum.Image = ((System.Drawing.Image)(resources.GetObject("btnAlum.Image")));
             this.btnAlum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlum.Location = new System.Drawing.Point(20, 179);
+            this.btnAlum.Location = new System.Drawing.Point(12, 189);
             this.btnAlum.Name = "btnAlum";
             this.btnAlum.Size = new System.Drawing.Size(185, 40);
             this.btnAlum.TabIndex = 7;
@@ -350,6 +350,7 @@
             this.btnEmple.TabIndex = 9;
             this.btnEmple.Text = "Empleados";
             this.btnEmple.UseVisualStyleBackColor = true;
+            this.btnEmple.Click += new System.EventHandler(this.BtnEmple_Click);
             // 
             // panel2
             // 

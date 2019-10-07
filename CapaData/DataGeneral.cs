@@ -44,5 +44,12 @@ namespace CapaData {
             da.Fill(tb);
             return tb;
         }
+
+        public DataTable ListarCarrera() {
+            conectar.ConnectionString = DataConexion.cn;
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CARRERA", conectar);
+            da.Fill(tb);
+            return tb;
+        }
     }
 }

@@ -40,7 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAlum = new System.Windows.Forms.Button();
             this.btnUsu = new System.Windows.Forms.Button();
-            this.btnDocen = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.btnEmple = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -176,7 +176,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnAlum);
             this.panel1.Controls.Add(this.btnUsu);
-            this.panel1.Controls.Add(this.btnDocen);
+            this.panel1.Controls.Add(this.btnCursos);
             this.panel1.Controls.Add(this.btnEmple);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -194,7 +194,7 @@
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(3, 748);
+            this.btnSalir.Location = new System.Drawing.Point(3, 771);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(202, 35);
             this.btnSalir.TabIndex = 16;
@@ -251,21 +251,22 @@
             this.btnUsu.Text = "Mis Notas";
             this.btnUsu.UseVisualStyleBackColor = true;
             // 
-            // btnDocen
+            // btnCursos
             // 
-            this.btnDocen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDocen.FlatAppearance.BorderSize = 0;
-            this.btnDocen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnDocen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocen.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.btnDocen.Image = ((System.Drawing.Image)(resources.GetObject("btnDocen.Image")));
-            this.btnDocen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocen.Location = new System.Drawing.Point(12, 253);
-            this.btnDocen.Name = "btnDocen";
-            this.btnDocen.Size = new System.Drawing.Size(185, 40);
-            this.btnDocen.TabIndex = 8;
-            this.btnDocen.Text = "Mis Cursos";
-            this.btnDocen.UseVisualStyleBackColor = true;
+            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCursos.FlatAppearance.BorderSize = 0;
+            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursos.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
+            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCursos.Location = new System.Drawing.Point(12, 253);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(185, 40);
+            this.btnCursos.TabIndex = 8;
+            this.btnCursos.Text = "Mis Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.BtnDocen_Click);
             // 
             // btnEmple
             // 
@@ -318,7 +319,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUsu;
-        private System.Windows.Forms.Button btnDocen;
+        private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnEmple;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;

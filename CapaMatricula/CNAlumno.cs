@@ -16,12 +16,16 @@ namespace CapaNegocio {
             return obj.IngresarPerso(nom, ape, telef, dni, email, sexo, fech, dirrecion, distri);
         }
 
-        public string IngresarAlum(int id_apode, int id_perso) {
-            return obj.IngresarAlum(id_apode, id_perso);
+        public string IngresarAlum(int id_apode, int id_perso, int id_carrera) {
+            return obj.IngresarAlum(id_apode, id_perso, id_carrera);
         }
 
         public DataTable BuscarAlumID(string cod) {
             return obj.BuscarAlumID(cod);
+        }
+
+        public DataTable BuscarCursosID(string cod) {
+            return obj.BuscarCursosID(cod);
         }
 
         public DataTable BuscarAlum(int num, string cod_a, string ape) {

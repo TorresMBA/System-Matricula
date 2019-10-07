@@ -27,5 +27,9 @@ namespace CapaNegocio {
         public DataTable ListarApoS() {
             return obj.ListarApoS();
         }
+        
+        public DataTable ListarCarrera() {
+            return obj.ListarCarrera();
+        }
     }
 }

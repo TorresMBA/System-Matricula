@@ -44,11 +44,12 @@ namespace CapaData {
             }
         }
 
-        public string IngresarAlum(int id_apode, int id_perso) {
+        public string IngresarAlum(int id_apode, int id_perso, int id_carrera) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("INSER_ALUM", conectar);
             cmd.Parameters.Add("@IDAPODE", SqlDbType.Int).Value = id_apode;
             cmd.Parameters.Add("@IDPERSO", SqlDbType.Int).Value = id_perso;
+            cmd.Parameters.Add("@IDCARRERA", SqlDbType.Int).Value = id_carrera;
             try {        
                 conectar.Open();
                 cmd.ExecuteNonQuery();
@@ -63,6 +64,14 @@ namespace CapaData {
             DataTable tb = new DataTable();
             conectar.ConnectionString = DataConexion.cn;
             SqlDataAdapter da = new SqlDataAdapter("BUSCAR_ALUM '" + cod + "'", conectar);
+            da.Fill(tb);
+            return tb;
+        }
+
+        public DataTable BuscarCursosID(string cod) {
+            DataTable tb = new DataTable();
+            conectar.ConnectionString = DataConexion.cn;
+            SqlDataAdapter da = new SqlDataAdapter("LISTAR_CURSOS '" + cod + "'", conectar);
             da.Fill(tb);
             return tb;
         }

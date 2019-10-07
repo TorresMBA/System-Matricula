@@ -83,3 +83,5 @@ D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaComun.pdb
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmMenuAlumno.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmMenuDocente.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmVistaMenu.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmVistaEmple.resources

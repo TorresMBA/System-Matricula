@@ -22,7 +22,7 @@ namespace Matricula {
 
         private void ListarDocen_Click(object sender, EventArgs e) {
             Docente.FrmListarDocen obj = new Docente.FrmListarDocen();
-            obj.ShowDialog();
+            obj.Show();
 
         }
 
@@ -33,14 +33,13 @@ namespace Matricula {
         public void mostrar(object from) {
             if(pnMostrar.Controls.Count > 0) {
                 pnMostrar.Controls.RemoveAt(0);
-            } else {
-                Form obj = from as Form;
-                obj.TopLevel = false;
-                obj.Dock = DockStyle.Fill;
-                pnMostrar.Controls.Add(obj);
-                pnMostrar.Tag = obj;
-                obj.Show();
             }
+            Form obj = from as Form;
+            obj.TopLevel = false;
+            obj.Dock = DockStyle.Fill;
+            pnMostrar.Controls.Add(obj);
+            pnMostrar.Tag = obj;
+            obj.Show();
         }
 
         private void BtnDocen_Click(object sender, EventArgs e) {
@@ -66,6 +65,10 @@ namespace Matricula {
 
         private void FrmMenu_Load(object sender, EventArgs e) {
             LoadDAtoUser();
+        }
+
+        private void BtnEmple_Click(object sender, EventArgs e) {
+            mostrar(new Empleado.FrmVistaEmple());
         }
     }
 }

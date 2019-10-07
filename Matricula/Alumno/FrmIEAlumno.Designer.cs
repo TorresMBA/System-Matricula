@@ -26,7 +26,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIEAlumno));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblid = new System.Windows.Forms.Label();
-            this.cboApo = new System.Windows.Forms.ComboBox();
             this.lblOpe = new System.Windows.Forms.Label();
             this.d = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
@@ -35,7 +34,6 @@
             this.txtDirrecion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.TextBox();
@@ -55,6 +53,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cboCarrera = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cboApo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +66,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblid);
-            this.groupBox1.Controls.Add(this.cboApo);
             this.groupBox1.Controls.Add(this.lblOpe);
             this.groupBox1.Controls.Add(this.d);
             this.groupBox1.Controls.Add(this.lblCod);
@@ -72,7 +74,6 @@
             this.groupBox1.Controls.Add(this.txtDirrecion);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cboSexo);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.Fecha);
@@ -103,15 +104,6 @@
             this.lblid.Size = new System.Drawing.Size(14, 19);
             this.lblid.TabIndex = 27;
             this.lblid.Text = "-";
-            // 
-            // cboApo
-            // 
-            this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cboApo.FormattingEnabled = true;
-            this.cboApo.Location = new System.Drawing.Point(527, 270);
-            this.cboApo.Name = "cboApo";
-            this.cboApo.Size = new System.Drawing.Size(139, 25);
-            this.cboApo.TabIndex = 26;
             // 
             // lblOpe
             // 
@@ -157,7 +149,7 @@
             // 
             this.cboDistrito.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboDistrito.FormattingEnabled = true;
-            this.cboDistrito.Location = new System.Drawing.Point(527, 330);
+            this.cboDistrito.Location = new System.Drawing.Point(527, 276);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(139, 25);
             this.cboDistrito.TabIndex = 21;
@@ -185,21 +177,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label9.Location = new System.Drawing.Point(383, 338);
+            this.label9.Location = new System.Drawing.Point(383, 279);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 21);
             this.label9.TabIndex = 18;
             this.label9.Text = "Distrito";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label8.Location = new System.Drawing.Point(379, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 21);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Apoderado:";
             // 
             // cboSexo
             // 
@@ -375,7 +357,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(136, 30);
             this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Registrar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
@@ -393,11 +375,69 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
+            // cboCarrera
+            // 
+            this.cboCarrera.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboCarrera.FormattingEnabled = true;
+            this.cboCarrera.Location = new System.Drawing.Point(172, 636);
+            this.cboCarrera.Name = "cboCarrera";
+            this.cboCarrera.Size = new System.Drawing.Size(139, 25);
+            this.cboCarrera.TabIndex = 23;
+            this.cboCarrera.Text = "Selecione...";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label12.Location = new System.Drawing.Point(28, 639);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 21);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Carrera:";
+            // 
+            // cboApo
+            // 
+            this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboApo.FormattingEnabled = true;
+            this.cboApo.Location = new System.Drawing.Point(539, 630);
+            this.cboApo.Name = "cboApo";
+            this.cboApo.Size = new System.Drawing.Size(139, 25);
+            this.cboApo.TabIndex = 28;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label13.Location = new System.Drawing.Point(391, 635);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 21);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Apoderado:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(192)))), ((int)(((byte)(106)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(287, 690);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // FrmIEAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 612);
+            this.ClientSize = new System.Drawing.Size(757, 731);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cboApo);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cboCarrera);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pnSuperior);
@@ -412,6 +452,7 @@
             this.pnSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -431,7 +472,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboDistrito;
         private System.Windows.Forms.TextBox txtDirrecion;
         private System.Windows.Forms.Label label10;
@@ -444,8 +484,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         public System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox cboApo;
         private System.Windows.Forms.Label lblid;
         public System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ComboBox cboCarrera;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cboApo;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Button button1;
     }
 }

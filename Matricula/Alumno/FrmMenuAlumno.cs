@@ -25,5 +25,10 @@ namespace Matricula.Alumno {
                 this.Close();
             }
         }
+
+        private void BtnDocen_Click(object sender, EventArgs e) {
+            FrmVistaMenu obj = new FrmVistaMenu();
+            obj.Show();
+        }
     }
 }
