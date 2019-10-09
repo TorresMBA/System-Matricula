@@ -194,6 +194,7 @@
             this.cboParen.Name = "cboParen";
             this.cboParen.Size = new System.Drawing.Size(155, 29);
             this.cboParen.TabIndex = 10;
+            this.cboParen.Text = "Selecione...";
             // 
             // Fecha
             // 

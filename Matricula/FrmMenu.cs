@@ -16,7 +16,7 @@ namespace Matricula {
         }
 
         private void IngresarEmpleadoToolStripMenuItem1_Click(object sender, EventArgs e) {
-            Empleado.FrmEmpleado obj = new Empleado.FrmEmpleado();
+            Empleado.FrmIEEmpleado obj = new Empleado.FrmIEEmpleado();
             obj.Show();
         }
 
@@ -30,11 +30,12 @@ namespace Matricula {
             mostrar(new Alumno.FrmVistaAlum());
         }
 
-        public void mostrar(object from) {
+        public void mostrar(object frm) {
             if(pnMostrar.Controls.Count > 0) {
                 pnMostrar.Controls.RemoveAt(0);
             }
-            Form obj = from as Form;
+            Form obj = frm as Form;
+            //Form obj = new Alumno.FrmIEAlumno() as Form;
             obj.TopLevel = false;
             obj.Dock = DockStyle.Fill;
             pnMostrar.Controls.Add(obj);
@@ -69,6 +70,29 @@ namespace Matricula {
 
         private void BtnEmple_Click(object sender, EventArgs e) {
             mostrar(new Empleado.FrmVistaEmple());
+        }
+
+        private void BackUpsToolStripMenuItem_Click(object sender, EventArgs e) {
+            Empleado.FrmBackUp bac = new Empleado.FrmBackUp();
+            bac.Show();
+        }
+
+        private void ClasesToolStripMenuItem_Click(object sender, EventArgs e) {
+            Cursos.FrmCursos curso = new Cursos.FrmCursos();
+            curso.Show();
+        }
+
+        private void BtnUsu_Click(object sender, EventArgs e) {
+            mostrar(new Login.FrmVistaUsu());
+        }
+
+        private void RegistroDeMatriculasToolStripMenuItem_Click(object sender, EventArgs e) {
+            Alumno.FrmMatricula mat = new Alumno.FrmMatricula();
+            mat.Show();
+        }
+
+        private void SalisToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }

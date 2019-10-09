@@ -1,5 +1,5 @@
-﻿namespace Matricula.Alumno {
-    partial class FrmVistaMenu {
+﻿namespace Matricula.Cursos {
+    partial class FrmCursos {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,34 +23,20 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.lblCod = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblCod
-            // 
-            this.lblCod.AutoSize = true;
-            this.lblCod.Location = new System.Drawing.Point(158, 145);
-            this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(10, 13);
-            this.lblCod.TabIndex = 0;
-            this.lblCod.Text = "-";
-            // 
-            // FrmVistaMenu
+            // FrmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 576);
-            this.Controls.Add(this.lblCod);
-            this.Name = "FrmVistaMenu";
-            this.Text = "FrnVistaMenu";
-            this.Load += new System.EventHandler(this.FrnVistaMenu_Load);
+            this.ClientSize = new System.Drawing.Size(928, 597);
+            this.Name = "FrmCursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmCursos";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCod;
     }
 }

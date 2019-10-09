@@ -1,5 +1,4 @@
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmEmpleado.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Properties.Resources.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
@@ -74,7 +73,6 @@ D:\Personal\Documentos\Visual Studio 2019\Projects\System-Matricula-master\Matri
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmInfoDocente.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmNotas.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmVistaDocen.resources
-D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmIngEmpleado.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmMatricula.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmIEDocente.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmSueldoDocen.resources
@@ -83,5 +81,10 @@ D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\bin\Debug\CapaComun.pdb
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmMenuAlumno.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Docente.FrmMenuDocente.resources
-D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmVistaMenu.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmVistaEmple.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmBackUp.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmIEEmpleado.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmListarEmpleado.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Login.FrmListarUsuario.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Login.FrmVistaUsu.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmAlumNoMatr.resources

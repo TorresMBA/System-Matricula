@@ -48,6 +48,7 @@
     <Compile Include="DataEmpleado.cs" />
     <Compile Include="DataGeneral.cs" />
     <Compile Include="DataLogin.cs" />
+    <Compile Include="DataUtilitario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

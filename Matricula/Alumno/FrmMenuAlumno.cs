@@ -27,8 +27,16 @@ namespace Matricula.Alumno {
         }
 
         private void BtnDocen_Click(object sender, EventArgs e) {
-            FrmVistaMenu obj = new FrmVistaMenu();
+            Docente.FrmMenuDocente obj = new Docente.FrmMenuDocente();
             obj.Show();
+        }
+
+        private void FrmMenuAlumno_Load(object sender, EventArgs e) {
+
+        }
+
+        private void cargarDatos() {
+
         }
     }
 }

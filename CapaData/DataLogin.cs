@@ -33,17 +33,5 @@ namespace CapaData {
             }
             
         }
-
-        public void Posicion() {
-            if(CacheLogin.Posiicion == CachePosicion.Administrativo) {
-
-            }
-            if(CacheLogin.Posiicion == CachePosicion.Docente) {
-
-            }
-            if(CacheLogin.Posiicion == CachePosicion.Alumno) {
-
-            }
-        }
     }
 }

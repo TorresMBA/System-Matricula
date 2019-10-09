@@ -43,20 +43,16 @@ namespace Matricula.Alumno {
         }
 
         private void TxtCod_TextChanged(object sender, EventArgs e) {
-            try {
-                string cod = txtCod.Text;
-                CapaNegocio.CNAlumno obj = new CapaNegocio.CNAlumno();
-                GridLisAlum.DataSource = obj.BuscarAlum(1, cod, "");
-            } catch(Exception ex) {
-
-            }
+            string cod = txtCod.Text;
+            CapaNegocio.CNAlumno obj = new CapaNegocio.CNAlumno();
+            GridLisAlum.DataSource = obj.BuscarAlum(1, cod, "");
         }
 
         private void TxtApe_TextChanged(object sender, EventArgs e) {
             try {
                 string ape = txtApe.Text;
                 CapaNegocio.CNAlumno obj = new CapaNegocio.CNAlumno();
-                GridLisAlum.DataSource = obj.BuscarAlum(2, ape, "");
+                GridLisAlum.DataSource = obj.BuscarAlum(2, "", ape);
             } catch(Exception ex) {
 
             }
@@ -79,6 +75,11 @@ namespace Matricula.Alumno {
 
         private void Button4_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e) {
+            Alumno.FrmAlumNoMatr obj = new FrmAlumNoMatr();
+            obj.Show();
         }
     }
 }

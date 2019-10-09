@@ -12,12 +12,19 @@ namespace CapaNegocio {
             return obj.ListarAlum();
         }
 
+        public DataTable ListarAlumNoMatric() {
+            return obj.ListarAlumNoMatric();
+        }
         public string IngresarPerso(string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
             return obj.IngresarPerso(nom, ape, telef, dni, email, sexo, fech, dirrecion, distri);
         }
 
-        public string IngresarAlum(int id_apode, int id_perso, int id_carrera) {
-            return obj.IngresarAlum(id_apode, id_perso, id_carrera);
+        public DataTable IngresarAlum(int id_carrera, int id_perso) {
+            return obj.IngresarAlum(id_carrera, id_perso);
+        }
+        
+        public DataTable ListarUltAlum() {
+            return obj.ListarUltAlum();
         }
 
         public DataTable BuscarAlumID(string cod) {

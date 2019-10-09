@@ -1,5 +1,5 @@
-﻿namespace Matricula.Cursos {
-    partial class FrmCursos {
+﻿namespace Matricula.Empleado {
+    partial class FrmMenuEmpleado {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,17 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.SuspendLayout();
-            // 
-            // FrmCursos
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 540);
-            this.Name = "FrmCursos";
-            this.Text = "FrmCursos";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FrmMenuEmpleado";
         }
 
         #endregion

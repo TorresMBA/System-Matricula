@@ -113,6 +113,7 @@
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(128, 27);
             this.txtape.TabIndex = 2;
+            this.txtape.TextChanged += new System.EventHandler(this.Txtape_TextChanged);
             // 
             // cboSeccion
             // 

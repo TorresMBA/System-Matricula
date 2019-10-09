@@ -125,6 +125,22 @@ INSERT INTO USUARIO VALUES('BTORRESM98','123',3),
 						 ('Maestro2','123',2),
 						 ('Admin', '123', 1)
 --
+-- C A R R E R A
+--
+CREATE TABLE CARRERA(
+ID_CARRERA INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+NOM_CARRERA VARCHAR(40)
+)
+
+INSERT INTO CARRERA VALUES('Ingeneria Sistemas'),
+						  ('Ingeneria Software'),
+						  ('Ingeneria Civil'),
+						  ('Ingeneria Ambiental'),
+						  ('Ingeneria Indusltrial'),
+						  ('Derecho'),
+						  ('Psicologia'),
+						  ('Administracion de Empresas')
+--
 -- A L U M N O
 --
 CREATE TABLE ALUMNO (
@@ -188,37 +204,75 @@ FOREIGN KEY (ID_EMPLEADO) REFERENCES EMPLEADO(ID_EMPLEADO) ON DELETE CASCADE
 
 INSERT INTO MAESTRO VALUES(1, 'Computacion e Informatica', 6),
 						  (2, 'Administrador de Base de Datos', 7)
---
--- C A R R E R A
---
-CREATE TABLE CARRERA(
-ID_CARRERA INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-NOM_CARRERA VARCHAR(40)
+--------------------
+-- C I C L O S
+------------------
+CREATE TABLE CICLO(
+ID_CICLO INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+NOM_CICLO VARCHAR(10)
 )
-
-INSERT INTO CARRERA VALUES('Ingeneria Sistemas'),
-						  ('Ingeneria Software'),
-						  ('Ingeneria Civil'),
-						  ('Ingeneria Ambiental'),
-						  ('Ingeneria Indusltrial'),
-						  ('Derecho'),
-						  ('Psicologia'),
-						  ('Administracion de Empresas')
+INSERT INTO CICLO VALUES('I'),
+						('II'),
+						('III'),
+						('IV'),
+						('V'),
+						('VI'),
+						('VII'),
+						('VIII'),
+						('IX'),
+						('X')
 --
 -- C U R S O S
 --
 CREATE TABLE CURSOS(
 ID_CURSO INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-NOM_CURSO VARCHAR(50),
-ID_CARRERA INT
-FOREIGN KEY (ID_CARRERA) REFERENCES CARRERA(ID_CARRERA)
+NOM_CURSO VARCHAR(100),
+ID_CARRERA INT,
+ID_CICLO INT
+FOREIGN KEY (ID_CARRERA) REFERENCES CARRERA(ID_CARRERA),
+FOREIGN KEY (ID_CICLO) REFERENCES CICLO(ID_CICLO)
 )
 
-INSERT INTO CURSOS VALUES('Software Aplicativo',1),
-						('Fundamentos de la Programacion',1),
-						('Matematica 1',1),
-						('Tecnologias Web',1),
-						('Base de Datos',1)
+INSERT INTO CURSOS VALUES('Software Aplicativo',1,1),
+						('Fundamentos de la Programacion',1,1),
+						('Matematica 1',1,1),
+						('Tecnologias Web',1,1),
+						('Base de Datos',1,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',2,1),
+						('Introduccion a la Matematica',2,1),
+						('Quimica General',2,1),
+						('Comprension y Redaccion de Textos',2,1),
+						('Investigacion Academica',2,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',3,1),
+						('Introduccion a la Matematica',3,1),
+						('Quimica General',3,1),
+						('Comprension y Redaccion de Textos',3,1),
+						('Investigacion Academica',3,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',4,1),
+						('Introduccion a la Matematica',4,1),
+						('Quimica General',4,1),
+						('Comprension y Redaccion de Textos',4,1),
+						('Investigacion Academica',4,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',5,1),
+						('Introduccion a la Matematica',5,1),
+						('Quimica General',5,1),
+						('Comprension y Redaccion de Textos',5,1),
+						('Investigacion Academica',5,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',6,1),
+						('Introduccion a la Matematica',6,1),
+						('Quimica General',6,1),
+						('Comprension y Redaccion de Textos',6,1),
+						('Investigacion Academica',6,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',7,1),
+						('Introduccion a la Matematica',7,1),
+						('Quimica General',7,1),
+						('Comprension y Redaccion de Textos',7,1),
+						('Investigacion Academica',7,1)
+INSERT INTO CURSOS VALUES('Introduccion a la Ingeneria',8,1),
+						('Introduccion a la Matematica',8,1),
+						('Quimica General',8,1),
+						('Comprension y Redaccion de Textos',8,1),
+						('Investigacion Academica',8,1)
 --
 -- C L A S E S
 --
@@ -255,15 +309,17 @@ INSERT INTO SECCION VALUES('PDSDS-301', 1),
 CREATE TABLE MATRICULA(
 ID_MATRIC INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
 ID_ALUM INT,
+ID_CICLO INT,
 PROM_NOTAS FLOAT
 FOREIGN KEY(ID_ALUM) REFERENCES ALUMNO(ID_ALUM),
+FOREIGN KEY(ID_CICLO) REFERENCES CICLO(ID_CICLO)
 )
 
-INSERT MATRICULA VALUES(1, 14.5),
-					   (2, 18.0),
-					   (3, 11.5),
-					   (4, 17.6),
-					   (5, 14.5)
+INSERT MATRICULA VALUES(1, 1, 14.5),
+					   (2, 1, 18.0),
+					   (3, 1, 11.5),
+					   (4, 1, 17.6),
+					   (5, 1, 14.5)		
 --------------------------------
 -- C L A S E S  C R E A D A S --
 --------------------------------
@@ -271,14 +327,13 @@ CREATE TABLE CLASES_CREADAS(
 ID_CCREADAS INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
 ID_MAESTRO INT,
 ID_MATRIC INT,
-CICLO CHAR(1),
 ID_SECCION INT
 FOREIGN KEY(ID_MATRIC)REFERENCES MATRICULA(ID_MATRIC) ON DELETE CASCADE,
 FOREIGN KEY(ID_MAESTRO)REFERENCES MAESTRO(ID_MAESTRO) ON DELETE CASCADE,
 FOREIGN KEY(ID_SECCION) REFERENCES SECCION(ID_SECCION) ON DELETE CASCADE
 )
 
-INSERT INTO CLASES_CREADAS VALUES(1, 1, 'I', 1)
+INSERT INTO CLASES_CREADAS VALUES(1, 1, 1)
 GO
 --
 -- P R O C E D I M I E N T O S  A L M A C E N A D O S
@@ -287,11 +342,18 @@ GO
 -- Copia de Seguridad --
 -------------------------
 CREATE PROCEDURE COPIADB
+@DB VARCHAR(30),
+@ETIQ VARCHAR(30),
+@TIPO BIT
 AS
-	BACKUP DATABASE MATRICULA TO DISK = 'E:\DB\MAtricual01.BAK'
+	DECLARE @SQL VARCHAR(100)
+	SET @SQL = 'BACKUP DATABASE ' + @DB + ' TO DISK = ' + CHAR(39) + 'D:\DB\' + @ETIQ + '.BAK' + CHAR(39)
+	IF(@TIPO = 1)
+		SET @SQL = @SQL + ' WITH DIFFERENTIAL'
+	EXEC (@SQL)
 GO
 
-EXEC COPIADB
+EXEC COPIADB 'MATRICULA', 'COMPLETO', 0
 GO
 --
 -- L I S T A D O
@@ -303,12 +365,15 @@ CREATE PROCEDURE LISTAR_DIS
 AS
 	SELECT * FROM DISTRITO
 GO
+
+EXEC LISTAR_DIS
+GO
 --------------------
 -- Listar Alumnos --
 --------------------
-ALTER PROCEDURE LISTAR_ALUM
+CREATE PROCEDURE LISTAR_ALUM
 AS 
-	SELECT A.ID_ALUM, A.COD_ALUM, C.NOM_CARRERA, P.NOM_PERSO, P.APE_PERSO, 
+	SELECT A.ID_ALUM, A.COD_ALUM, P.NOM_PERSO, P.APE_PERSO, C.NOM_CARRERA, 
 	AP.NOM_APODE, AP.PARENTEZCO, P.TELEFONO, P.EMAIL, P.SEXO, P.EST_PERSO 
 	FROM ALUMNO A
 	INNER JOIN PERSONA P
@@ -317,16 +382,41 @@ AS
 	ON A.ID_CARRERA = C.ID_CARRERA
 	INNER JOIN APODERADO AP
 	ON A.ID_APODE = AP.ID_APODE
+	INNER JOIN DISTRITO D
+	ON D.ID_DIS = P.ID_DIS 
+					--INNER JOIN MATRICULA M
+					--ON A.ID_ALUM = M.ID_ALUM
 GO
 
 EXEC LISTAR_ALUM
+GO
+-------------
+-- Listar Alumnos no Matriculados
+-----------
+CREATE PROCEDURE LISTAR_ALUM_NOMATRI
+AS
+	SELECT A.ID_ALUM, A.COD_ALUM, P.NOM_PERSO, P.APE_PERSO, P.DNI, P.FECHA_NAC,
+	AP.NOM_APODE, AP.PARENTEZCO, P.TELEFONO, P.EMAIL, P.SEXO, P.DIRRECION, D.NOM_DIS, EST_PERSO
+	FROM ALUMNO A
+	LEFT JOIN PERSONA P
+	ON A.ID_PERSO = P.ID_PERSO
+	LEFT JOIN APODERADO AP
+	ON A.ID_APODE = AP.ID_APODE
+	LEFT JOIN DISTRITO D
+	ON D.ID_DIS = P.ID_DIS 
+	LEFT JOIN MATRICULA M
+	ON A.ID_ALUM = M.ID_ALUM 
+	WHERE M.ID_MATRIC IS NULL					
+GO
+
+EXEC LISTAR_ALUM_NOMATRI
 GO
 ----------------------
 -- Listar Empleados --
 ----------------------
 CREATE PROCEDURE LISTAR_EMPLE
 AS
-	SELECT  E.ID_EMPLEADO AS ID, E.COD_EMPLE AS COD, P.NOM_PERSO AS Nombre, P.APE_PERSO AS APellido, P.DNI AS DNI, P.EMAIL AS Email, P.FECHA_NAC AS Fecha, 
+	SELECT  E.ID_EMPLEADO AS ID, E.COD_EMPLE AS COD, P.NOM_PERSO AS Nombre, P.APE_PERSO AS Apellido, P.DNI AS DNI, P.EMAIL AS Email, P.FECHA_NAC AS Fecha, 
 	P.SEXO AS Sexo, P.TELEFONO AS Celular, E.HORAS_TRABAJO AS Horas, E.SUELDO_BASE AS Sueldo, P.EST_PERSO AS Estado
 	FROM EMPLEADO E
 	INNER JOIN PERSONA P
@@ -340,7 +430,7 @@ GO
 ---------------------
 CREATE PROCEDURE LISTAR_MAEST
 AS
-	SELECT M.ID_MAESTRO, E.COD_EMPLE, P.NOM_PERSO, P.APE_PERSO, P.SEXO, M.AREA_DOCEN
+	SELECT M.ID_MAESTRO, E.COD_EMPLE, P.NOM_PERSO, P.APE_PERSO, M.AREA_DOCEN, P.SEXO
 	FROM MAESTRO M
 	INNER JOIN EMPLEADO E
 	ON M.ID_EMPLEADO = E.ID_EMPLEADO
@@ -365,12 +455,32 @@ GO
 
 EXEC LISTAR_ADMIN
 GO
+------------
+-- Listar Usuario de Inicio de Sesion
+------------
+CREATE PROCEDURE INICIAR_SESION
+@USER VARCHAR(25),
+@CONTRA VARCHAR(30)
+AS
+	SELECT * FROM USUARIO WHERE NOM_USU = @USER AND PASS = @CONTRA
+GO
+
+
+--------
+CREATE PROCEDURE DATOS_USER
+@COD VARCHAR(25)
+AS
+	SELECT P.NOM_PERSO, P.APE_PERSO 
+	FROM PERSONA P
+	INNER JOIN ALUMNO A
+	ON A.ID_PERSO = P.ID_PERSO
+	INNER JOIN EMPLEADO E
+	ON E.ID_PERSO = E.ID_PERSO
+GO
 --
--- I N S E R C I O N
---
-------------------------------
--- Ultima Persona Ingresada --
-------------------------------
+------------------------------------
+-- Listar Ultima Persona Ingresada --
+------------------------------------
 CREATE PROCEDURE ULTIMA_PERSO
 AS
 	SELECT TOP 1 ID_PERSO FROM PERSONA ORDER BY ID_PERSO DESC
@@ -378,9 +488,9 @@ GO
 
 EXEC ULTIMA_PERSO
 GO
----------------
---
------------
+--------------------------------------
+-- Listar Ultimo Apoderado Ingresado --
+--------------------------------------
 CREATE PROCEDURE ULTIMA_APODE
 AS
 	SELECT TOP 1 ID_APODE, NOM_APODE FROM APODERADO ORDER BY ID_APODE DESC
@@ -388,19 +498,51 @@ GO
 
 EXEC ULTIMA_APODE
 GO
----------------
---
--------------
+-------------------------------------
+-- Listar los Apoderados Sin Alumno --
+-------------------------------------
 CREATE PROCEDURE APODE_SIN
 AS
 	SELECT APO.ID_APODE, APO.NOM_APODE
 	FROM ALUMNO A RIGHT JOIN APODERADO APO
 	ON APO.ID_APODE = A.ID_APODE
 	WHERE A.ID_ALUM IS NULL
-	GO
-	SELECT * FROM PERSONA
+GO
+
 EXEC APODE_SIN
 GO
+--------------------
+-- Listar Seccion --
+--------------------
+CREATE PROCEDURE LISTAR_SEC
+AS
+	SELECT ID_SECCION, COD_SECCION FROM SECCION
+GO
+
+EXEC LISTAR_SEC
+GO
+-----------------
+-- Listar Cursos POR CODIGO
+-------------
+CREATE PROCEDURE LISTAR_CURSOS
+@COD VARCHAR(20)
+AS
+	SELECT CI.NOM_CICLO, CU.NOM_CURSO
+	FROM ALUMNO A
+	INNER JOIN CARRERA CA
+	ON A.ID_CARRERA = CA.ID_CARRERA
+	INNER JOIN CURSOS CU
+	ON CA.ID_CARRERA = CU.ID_CARRERA
+	INNER JOIN CICLO CI
+	ON CU.ID_CICLO = CI.ID_CICLO
+	WHERE A.COD_ALUM = @COD
+GO
+
+EXEC LISTAR_CURSOS 'ANEYRAF98'
+GO
+--
+-- I N S E R C I O N
+--
 ------------------------
 -- Ingresar Apoderado --
 ------------------------
@@ -440,42 +582,22 @@ AS
 	INSERT INTO PERSONA VALUES(@NOM, @APE, @TELF, @DNI, @EMAIL, @SEXO, @NAC, @EST, @DIREC, @IDDIS, @NIVEL)
 GO
 
-EXEC ING_PER 'Alan','Garcia','995509218','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Administrativo'
+EXEC ING_PER 'Alan','Garcia','995509218','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
 EXEC ING_PER 'Juan','Lee','934626785','12345678','alan@gmail.com','F','1986-01-20','A','asdasd',1,'Maestro'
 EXEC ING_PER 'Anthony','Menacho','972101160','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
 GO
 ---------------------
 -- Ingresar Alumno --
 ---------------------
-CREATE PROCEDURE INSER_ALUM
+create PROCEDURE INSER_ALUM
 @IDAPODE INT,
 @IDPERSO INT
 AS
-	INSERT INTO ALUMNO VALUES(@IDAPODE, NULL, @IDPERSO)
+	INSERT INTO ALUMNO VALUES(@IDAPODE, NULL, @IDPERSO, NULL, NULL)
 GO
 
-EXEC INSER_ALUM 13,41
-GO
-----------------------
--- Modificar Alumno --
-----------------------
-CREATE PROCEDURE MODF_ALUM
-	@ID INT,
-	@NOM VARCHAR(30),
-	@APE VARCHAR(30),
-	@TELF VARCHAR(9),
-	@DNI VARCHAR(8),
-	@EMAIL VARCHAR(40),
-	@SEXO CHAR(1),
-	@NAC DATE,
-	@EST CHAR(1),
-	@DIREC VARCHAR(60),
-	@IDDIS INT
-AS
-	UPDATE PERSONA SET NOM_PERSO = @NOM, APE_PERSO = @APE, TELEFONO = @TELF, DNI = @DNI, EMAIL = @EMAIL, SEXO = @SEXO, FECHA_NAC = @NAC, EST_PERSO = @EST, DIRRECION = @DIREC, ID_DIS = @IDDIS WHERE ID_PERSO = @ID
-GO
-
-EXEC MODF_ALUM 1,'Modificado1','ApeModificado1','123456789','12345678','corremodificado@gmail.com','M','1998-06-29','A','Mz T Lt 1-A', 3
+EXEC INSER_ALUM 7,10
+EXEC INSER_ALUM 9,14
 GO
 ----------------
 -- Ingresar Empleado
@@ -523,10 +645,47 @@ INSERT INTO USUARIO VALUES ('director','123','admin')
 
 EXEC INSER_ADMINIS 9,'Director','Administrativo', 10
 GO
-------------------
 --
---------------
-ALTER PROCEDURE BUSCAR_ALUM
+-- M O D I F I C A R
+--
+----------------------
+-- Modificar Alumno --
+----------------------
+CREATE PROCEDURE MODF_ALUM
+	@ID INT,
+	@NOM VARCHAR(30),
+	@APE VARCHAR(30),
+	@TELF VARCHAR(9),
+	@DNI VARCHAR(8),
+	@EMAIL VARCHAR(40),
+	@SEXO CHAR(1),
+	@NAC DATE,
+	@EST CHAR(1),
+	@DIREC VARCHAR(60),
+	@IDDIS INT
+AS
+	UPDATE PERSONA SET NOM_PERSO = @NOM, APE_PERSO = @APE, TELEFONO = @TELF, DNI = @DNI, EMAIL = @EMAIL, SEXO = @SEXO, FECHA_NAC = @NAC, EST_PERSO = @EST, DIRRECION = @DIREC, ID_DIS = @IDDIS WHERE ID_PERSO = @ID
+GO
+
+EXEC MODF_ALUM 1,'Modificado1','ApeModificado1','123456789','12345678','corremodificado@gmail.com','M','1998-06-29','A','Mz T Lt 1-A', 3
+GO
+--
+-- E L I M I N A R
+--
+-------------
+--
+---------------
+CREATE PROCEDURE ELIMINAR
+AS
+
+GO
+--
+-- B U S Q U E D A S
+--
+--------------------
+-- Buscar Alumnos --
+--------------------
+CREATE PROCEDURE BUSCAR_ALUM
 @COD VARCHAR(15)
 AS
 	SELECT P.ID_PERSO, A.ID_ALUM, A.COD_ALUM, P.NOM_PERSO, C.NOM_CARRERA, P.APE_PERSO, P.DNI, P.FECHA_NAC,
@@ -547,26 +706,11 @@ GO
 
 EXEC BUSCAR_ALUM 'BTORRESM98'
 GO
------------------
--- Listar Cursos
--------------
-CREATE PROCEDURE LISTAR_CURSOS
-@COD VARCHAR(20)
-AS
-	SELECT CU.NOM_CURSO
-	FROM ALUMNO A
-	INNER JOIN CARRERA CA
-	ON A.ID_CARRERA = CA.ID_CARRERA
-	INNER JOIN CURSOS CU
-	ON CA.ID_CARRERA = CU.ID_CARRERA
-	WHERE A.COD_ALUM = @COD
-GO
-
 ---------------
---Buscar
+-- Buscar
 -----------------
 CREATE PROCEDURE BUSCAR_ALUMD
-	@num int,
+	@NUM int,
 	@COD VARCHAR(15),
 	@APE VARCHAR(15)
 AS
@@ -583,28 +727,21 @@ AS
 					INNER JOIN MATRICULA M
 					ON A.ID_ALUM = M.ID_ALUM 
 					WHERE '
-	IF @APE = '' AND @COD = ''
+	/*IF @APE = '' AND @COD = ''
 		EXEC LISTAR_ALUM
 	ELSE
-		BEGIN
+		BEGIN*/
 			IF @num = 1
 				SET @CONSULTA = @CONSULTA + ' A.COD_ALUM LIKE ' + CHAR(39) + @COD + '%' + CHAR(39)
 			ELSE
 				SET @CONSULTA = @CONSULTA + ' P.APE_PERSO LIKE ' + CHAR(39) + @APE + '%' + CHAR(39)
 			EXEC (@CONSULTA)
-		END
+		/*END*/
+GO
+					
+EXEC BUSCAR_ALUMD 2,'',''
 GO
 
-----------------
---
---------------
-CREATE PROCEDURE LISTAR_SEC
-AS
-	SELECT ID_SECCION, COD_SECCION FROM SECCION
-GO
-
-EXEC LISTAR_SEC
-GO
 -- 
 -- T R I G G E R S
 --
@@ -626,7 +763,33 @@ ON ALUMNO FOR INSERT
 AS
 	DECLARE @NOM CHAR(1), @APE VARCHAR(25), @FECHA CHAR(2), @ID INT, @SELEC VARCHAR(300)
 	SET @SELEC = (SELECT TOP 1 ID_PERSO FROM PERSONA ORDER BY ID_PERSO DESC)
-	SELECT @ID = ID_PERSO, @NOM = LEFT(NOM_PERSO, 1),  @APE = APE_PERSO,  @FECHA = RIGHT(YEAR(FECHA_NAC),2) FROM PERSONA WHERE ID_PERSO = @SELEC
-	print @id
+	SELECT @ID = ID_PERSO, @NOM = LEFT(NOM_PERSO, 1),  @APE = APE_PERSO,  @FECHA = RIGHT(YEAR(FECHA_NAC),2) FROM PERSONA
 	UPDATE ALUMNO SET COD_ALUM = UPPER(CONCAT(@NOM,@APE,@FECHA)) WHERE ALUMNO.ID_PERSO = @ID
 GO
+-------
+CREATE TRIGGER TR_ALUM
+ON PERSONA FOR INSERT
+AS	
+	DECLARE @APODE INT, @IDPERSO INT, @NOM CHAR(1), @APE VARCHAR(25), @FECHA CHAR(2), @CODALUM VARCHAR(15)
+	SET @APODE = (SELECT TOP 1 ID_APODE FROM APODERADO ORDER BY ID_APODE DESC)
+	SELECT @IDPERSO = ID_PERSO,  @NOM = LEFT(NOM_PERSO, 1),  @APE = APE_PERSO,  @FECHA = RIGHT(YEAR(FECHA_NAC),2) FROM inserted WHERE NIVEL = 'Alumno'
+	--SET @CODALUM =  UPPER(CONCAT(@NOM,@APE,@FECHA))
+	INSERT INTO ALUMNO VALUES(@APODE, UPPER(CONCAT(@NOM,@APE,@FECHA)), @IDPERSO, NULL, NULL) 
+	--EXEC INSER_ALUM  @APODE, @CODALUM, @IDPERSO
+GO
+---------
+SELECT * FROM ALUMNO
+SELECT * FROM PERSONA
+SELECT * FROM APODERADO
+exec APODE_SIN
+GO
+
+CREATE PROCEDURE ACTUALIZAR_ALUM
+@DATO INT,
+@IDPERSO INT
+AS
+	UPDATE A SET A.ID_CARRERA = @DATO FROM ALUMNO A
+	INNER JOIN PERSONA P 
+	ON P.ID_PERSO = A.ID_PERSO
+	WHERE A.ID_PERSO = @IDPERSO
+GO 

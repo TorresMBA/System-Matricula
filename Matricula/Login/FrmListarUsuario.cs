@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Matricula.Empleado {
-    public partial class FrmIngEmpleado : Form {
-        public FrmIngEmpleado() {
+namespace Matricula.Login {
+    public partial class FrmListarUsuario : Form {
+        public FrmListarUsuario() {
             InitializeComponent();
         }
     }

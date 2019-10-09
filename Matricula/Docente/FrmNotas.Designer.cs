@@ -308,7 +308,7 @@
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(362, 669);
+            this.btnSalir.Location = new System.Drawing.Point(369, 668);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(202, 35);
             this.btnSalir.TabIndex = 25;

@@ -57,7 +57,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cboApo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +65,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblid);
+            this.groupBox1.Controls.Add(this.cboCarrera);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.cboApo);
             this.groupBox1.Controls.Add(this.lblOpe);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.d);
             this.groupBox1.Controls.Add(this.lblCod);
             this.groupBox1.Controls.Add(this.label11);
@@ -91,7 +94,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.groupBox1.Location = new System.Drawing.Point(12, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(733, 396);
+            this.groupBox1.Size = new System.Drawing.Size(733, 426);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Alumno";
@@ -353,7 +356,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(190, 566);
+            this.btnGuardar.Location = new System.Drawing.Point(172, 597);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(136, 30);
             this.btnGuardar.TabIndex = 5;
@@ -367,7 +370,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalir.Location = new System.Drawing.Point(437, 566);
+            this.btnSalir.Location = new System.Drawing.Point(456, 597);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(136, 30);
             this.btnSalir.TabIndex = 6;
@@ -379,7 +382,7 @@
             // 
             this.cboCarrera.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboCarrera.FormattingEnabled = true;
-            this.cboCarrera.Location = new System.Drawing.Point(172, 636);
+            this.cboCarrera.Location = new System.Drawing.Point(157, 383);
             this.cboCarrera.Name = "cboCarrera";
             this.cboCarrera.Size = new System.Drawing.Size(139, 25);
             this.cboCarrera.TabIndex = 23;
@@ -389,7 +392,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label12.Location = new System.Drawing.Point(28, 639);
+            this.label12.Location = new System.Drawing.Point(13, 387);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 21);
             this.label12.TabIndex = 22;
@@ -399,45 +402,27 @@
             // 
             this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboApo.FormattingEnabled = true;
-            this.cboApo.Location = new System.Drawing.Point(539, 630);
+            this.cboApo.Location = new System.Drawing.Point(527, 339);
             this.cboApo.Name = "cboApo";
             this.cboApo.Size = new System.Drawing.Size(139, 25);
             this.cboApo.TabIndex = 28;
+            this.cboApo.Text = "Selecione...";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label13.Location = new System.Drawing.Point(391, 635);
+            this.label13.Location = new System.Drawing.Point(379, 334);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(106, 21);
             this.label13.TabIndex = 27;
             this.label13.Text = "Apoderado:";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(192)))), ((int)(((byte)(106)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(287, 690);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 30);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // FrmIEAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 731);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cboApo);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.cboCarrera);
-            this.Controls.Add(this.label12);
+            this.ClientSize = new System.Drawing.Size(757, 639);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pnSuperior);
@@ -452,7 +437,6 @@
             this.pnSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -490,6 +474,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cboApo;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Button button1;
     }
 }

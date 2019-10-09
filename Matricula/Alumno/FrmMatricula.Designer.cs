@@ -41,7 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -138,9 +138,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(29, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 23);
+            this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.label3.Text = "Alumno:";
             // 
             // groupBox2
             // 
@@ -187,16 +187,16 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(425, 43);
+            this.button3.Location = new System.Drawing.Point(538, 43);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 39);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(252, 43);
+            this.button2.Location = new System.Drawing.Point(302, 43);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 39);
             this.button2.TabIndex = 1;
@@ -209,36 +209,36 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 39);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Matricula";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.label1.Location = new System.Drawing.Point(393, 164);
+            this.label1.Location = new System.Drawing.Point(365, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 23);
             this.label1.TabIndex = 9;
             this.label1.Text = "Fecha de Inscripcion";
             // 
-            // label2
+            // lblFecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.label2.Location = new System.Drawing.Point(649, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 23);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "-";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblFecha.Location = new System.Drawing.Point(649, 164);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(17, 23);
+            this.lblFecha.TabIndex = 10;
+            this.lblFecha.Text = "-";
             // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 696);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -247,6 +247,7 @@
             this.Name = "FrmMatricula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMatricula";
+            this.Load += new System.EventHandler(this.FrmMatricula_Load);
             this.pnSuperior.ResumeLayout(false);
             this.pnSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -269,7 +270,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

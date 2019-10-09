@@ -13,5 +13,9 @@ namespace Matricula.Alumno {
         public FrmMatricula() {
             InitializeComponent();
         }
+
+        private void FrmMatricula_Load(object sender, EventArgs e) {
+            
+        }
     }
 }

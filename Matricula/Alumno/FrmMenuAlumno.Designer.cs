@@ -296,6 +296,7 @@
             this.Name = "FrmMenuAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuAlumno";
+            this.Load += new System.EventHandler(this.FrmMenuAlumno_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

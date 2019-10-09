@@ -36,8 +36,11 @@ namespace Matricula.Alumno {
         }
 
         private void FrmVistaAlum_Activated(object sender, EventArgs e) {
-            GridAlum.DataSource = obj.ListarAlum();
-            
+            GridAlum.DataSource = obj.ListarAlum();  
+        }
+
+        private void Txtape_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

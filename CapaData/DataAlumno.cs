@@ -18,6 +18,22 @@ namespace CapaData {
             return tb;
         }
 
+        public DataTable ListarAlumNoMatric() {
+            DataTable tb = new DataTable();
+            conectar.ConnectionString = DataConexion.cn;
+            SqlDataAdapter da = new SqlDataAdapter("LISTAR_ALUM_NOMATRI", conectar);
+            da.Fill(tb);
+            return tb;
+        }
+
+        public DataTable ListarUltAlum() {
+            DataTable tb = new DataTable();
+            conectar.ConnectionString = DataConexion.cn;
+            SqlDataAdapter da = new SqlDataAdapter("ULTIMA_PERSO", conectar);
+            da.Fill(tb);
+            return tb;
+        }
+
         public string IngresarPerso(string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("ING_PER", conectar);
@@ -44,20 +60,12 @@ namespace CapaData {
             }
         }
 
-        public string IngresarAlum(int id_apode, int id_perso, int id_carrera) {
+        public DataTable IngresarAlum(int id_carrera, int id_perso) {
+            DataTable tb = new DataTable();
             conectar.ConnectionString = DataConexion.cn;
-            SqlCommand cmd = new SqlCommand("INSER_ALUM", conectar);
-            cmd.Parameters.Add("@IDAPODE", SqlDbType.Int).Value = id_apode;
-            cmd.Parameters.Add("@IDPERSO", SqlDbType.Int).Value = id_perso;
-            cmd.Parameters.Add("@IDCARRERA", SqlDbType.Int).Value = id_carrera;
-            try {        
-                conectar.Open();
-                cmd.ExecuteNonQuery();
-                conectar.Close();
-                return "Todo ok";
-            } catch(Exception ex) {
-                return ex.Message;
-            }
+            SqlDataAdapter da = new SqlDataAdapter("ACTUALIZAR_ALUM '" + id_carrera + "', '" + id_perso + "'", conectar);
+            da.Fill(tb);
+            return tb;
         }
 
         public DataTable BuscarAlumID(string cod) {

@@ -13,5 +13,10 @@ namespace Matricula.Empleado {
         public FrmVistaEmple() {
             InitializeComponent();
         }
+
+        private void BtnMenu_Click(object sender, EventArgs e) {
+            FrmListarEmpleado obj = new FrmListarEmpleado();
+            obj.Show();
+        }
     }
 }

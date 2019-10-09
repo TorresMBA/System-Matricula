@@ -31,13 +31,13 @@
             this.pnSuperior = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboSeccion = new System.Windows.Forms.ComboBox();
             this.txtape = new System.Windows.Forms.TextBox();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GridAlum = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboSeccion = new System.Windows.Forms.ComboBox();
             this.pnSuperior.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridAlum)).BeginInit();
@@ -55,6 +55,7 @@
             this.btnMenu.TabIndex = 12;
             this.btnMenu.Text = "Menu Alumno";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
             // pnSuperior
             // 
@@ -93,6 +94,25 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label1.Location = new System.Drawing.Point(42, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 21);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Especialidad:";
+            // 
+            // cboSeccion
+            // 
+            this.cboSeccion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cboSeccion.FormattingEnabled = true;
+            this.cboSeccion.Location = new System.Drawing.Point(169, 31);
+            this.cboSeccion.Name = "cboSeccion";
+            this.cboSeccion.Size = new System.Drawing.Size(126, 29);
+            this.cboSeccion.TabIndex = 8;
             // 
             // txtape
             // 
@@ -180,25 +200,6 @@
             this.GridAlum.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridAlum.Size = new System.Drawing.Size(911, 327);
             this.GridAlum.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.Location = new System.Drawing.Point(42, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 21);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Especialidad:";
-            // 
-            // cboSeccion
-            // 
-            this.cboSeccion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cboSeccion.FormattingEnabled = true;
-            this.cboSeccion.Location = new System.Drawing.Point(169, 31);
-            this.cboSeccion.Name = "cboSeccion";
-            this.cboSeccion.Size = new System.Drawing.Size(126, 29);
-            this.cboSeccion.TabIndex = 8;
             // 
             // FrmVistaEmple
             // 
