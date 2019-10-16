@@ -16,5 +16,9 @@ namespace CapaNegocio {
         public string BackUp(string db, string etiq, byte tipo) {
             return dt.BackUp(db, etiq, tipo);
         }
+
+        public string Restaurar(string db, string copia) {
+            return dt.Restaurar(db, copia);
+        }
     }
 }

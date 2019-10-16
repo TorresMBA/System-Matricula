@@ -19,8 +19,6 @@ namespace Matricula.Alumno {
             listarCarrera();
             listarDis();
             if(lblOpe.Text == "Nuevo") {
-                CapaNegocio.CNGeneral obj = new CapaNegocio.CNGeneral();
-                DataTable tb = new DataTable();
                 listarApoS();
                 /*tb = obj.ultApode();
                 cboApo.Text = tb.Rows[0]["NOM_APODE"].ToString();*/
@@ -39,7 +37,15 @@ namespace Matricula.Alumno {
                 cboApo.Text = tb.Rows[0]["NOM_APODE"].ToString();
                 cboDistrito.Text = tb.Rows[0]["NOM_DIS"].ToString();
                 cboSexo.Text = tb.Rows[0]["SEXO"].ToString();
+                if(cboSexo.Text == "M") {
+                    cboSexo.Text = "Masculino";
+                } else {
+                    cboSexo.Text = "Femenino";
+                }
+                byte[] foto = (byte[])tb.Rows[0]["FOTO"];
                 cboApo.Enabled = false;
+                System.IO.MemoryStream ms = new System.IO.MemoryStream(foto);
+                pbFoto.Image = Image.FromStream(ms);
             }
         }
 
@@ -48,15 +54,17 @@ namespace Matricula.Alumno {
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e) {
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             if(lblOpe.Text == "Nuevo") {
-                string sql = obj.IngresarPerso(txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex));
-                DataTable tb = obj.ListarUltAlum();
-                int id = int.Parse(tb.Rows[0]["ID_PERSO"].ToString());
-                obj.IngresarAlum(int.Parse(cboCarrera.SelectedValue.ToString()), id);
+                int idper = obj.IngresarPerso(0, txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex), ms.GetBuffer());
+                /*DataTable tb = obj.ListarUltAlum();
+                int id = int.Parse(tb.Rows[0]["ID_PERSO"].ToString());*/
+                obj.IngresarAlum(int.Parse(cboCarrera.SelectedValue.ToString()), idper);
                 MessageBox.Show("Registrado Correctamente");
                 this.Close();
             } else {
-                string sql = obj.ModificarAlum(int.Parse(lblid.Text), txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex));
+                string sql = obj.ModificarAlum(int.Parse(lblid.Text), txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex), ms.GetBuffer());
                 MessageBox.Show("Modificado Correctamente");
                 this.Close();
             }
@@ -87,6 +95,15 @@ namespace Matricula.Alumno {
 
         private void BtnSalir_Click_1(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void BtnFoto_Click(object sender, EventArgs e) {
+            OpenFileDialog abrir = new OpenFileDialog();
+            DialogResult resul = abrir.ShowDialog();
+            if(resul == DialogResult.OK) {
+                pbFoto.Image = Image.FromFile(abrir.FileName);
+            }
+
         }
     }
 }

@@ -65,7 +65,7 @@ namespace Matricula {
         }
 
         private void FrmMenu_Load(object sender, EventArgs e) {
-            LoadDAtoUser();
+            LoadDAtoUser();    
         }
 
         private void BtnEmple_Click(object sender, EventArgs e) {
@@ -73,8 +73,7 @@ namespace Matricula {
         }
 
         private void BackUpsToolStripMenuItem_Click(object sender, EventArgs e) {
-            Empleado.FrmBackUp bac = new Empleado.FrmBackUp();
-            bac.Show();
+            
         }
 
         private void ClasesToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -93,6 +92,16 @@ namespace Matricula {
 
         private void SalisToolStripMenuItem_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        private void CrearUnBackUpToolStripMenuItem_Click(object sender, EventArgs e) {
+            Empleado.FrmBackUp bac = new Empleado.FrmBackUp();
+            bac.Show();
+        }
+
+        private void RestaurarDBToolStripMenuItem_Click(object sender, EventArgs e) {
+            Empleado.FrmRestoreBackUp obj = new Empleado.FrmRestoreBackUp();
+            obj.Show();
         }
     }
 }

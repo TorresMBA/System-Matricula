@@ -42,5 +42,13 @@ namespace Matricula.Alumno {
         private void Txtape_TextChanged(object sender, EventArgs e) {
 
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e) {
+
+        }
+
+        private void GridAlum_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
     }
 }

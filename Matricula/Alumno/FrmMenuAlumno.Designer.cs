@@ -28,7 +28,7 @@
             this.lblNomUsu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbFotoA = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnEmple = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoA)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,15 +98,15 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // pictureBox3
+            // pbFotoA
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(803, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(106, 111);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.pbFotoA.Image = ((System.Drawing.Image)(resources.GetObject("pbFotoA.Image")));
+            this.pbFotoA.Location = new System.Drawing.Point(803, 12);
+            this.pbFotoA.Name = "pbFotoA";
+            this.pbFotoA.Size = new System.Drawing.Size(106, 111);
+            this.pbFotoA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFotoA.TabIndex = 14;
+            this.pbFotoA.TabStop = false;
             // 
             // panel2
             // 
@@ -115,7 +115,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pbFotoA);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(208, 0);
             this.panel2.Name = "panel2";
@@ -299,7 +299,7 @@
             this.Load += new System.EventHandler(this.FrmMenuAlumno_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoA)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -313,7 +313,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblNomUsu;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbFotoA;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;

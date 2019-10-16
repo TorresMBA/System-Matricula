@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaComun.Cache;
 
 namespace Matricula.Alumno {
     public partial class FrmMenuAlumno : Form {
@@ -32,11 +33,7 @@ namespace Matricula.Alumno {
         }
 
         private void FrmMenuAlumno_Load(object sender, EventArgs e) {
-
-        }
-
-        private void cargarDatos() {
-
+         
         }
     }
 }

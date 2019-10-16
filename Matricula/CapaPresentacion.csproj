@@ -100,6 +100,30 @@
     <Compile Include="Carrera\FrmCarrera.Designer.cs">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\UCBuscarAlum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UCBuscarAlum.Designer.cs">
+      <DependentUpon>UCBuscarAlum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UCBuscarDocen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UCBuscarDocen.Designer.cs">
+      <DependentUpon>UCBuscarDocen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UCBuscarEmple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UCBuscarEmple.Designer.cs">
+      <DependentUpon>UCBuscarEmple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UCBuscarUsu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UCBuscarUsu.Designer.cs">
+      <DependentUpon>UCBuscarUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Docente\FrmIEDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +190,12 @@
     <Compile Include="Empleado\FrmMenuEmpleado.Designer.cs">
       <DependentUpon>FrmMenuEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\FrmRestoreBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmRestoreBackUp.Designer.cs">
+      <DependentUpon>FrmRestoreBackUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empleado\FrmVistaEmple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +261,18 @@
     <EmbeddedResource Include="Carrera\FrmCarrera.resx">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UCBuscarAlum.resx">
+      <DependentUpon>UCBuscarAlum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UCBuscarDocen.resx">
+      <DependentUpon>UCBuscarDocen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UCBuscarEmple.resx">
+      <DependentUpon>UCBuscarEmple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UCBuscarUsu.resx">
+      <DependentUpon>UCBuscarUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docente\FrmIEDocente.resx">
       <DependentUpon>FrmIEDocente.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\FrmListarEmpleado.resx">
       <DependentUpon>FrmListarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmRestoreBackUp.resx">
+      <DependentUpon>FrmRestoreBackUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\FrmVistaEmple.resx">
       <DependentUpon>FrmVistaEmple.cs</DependentUpon>

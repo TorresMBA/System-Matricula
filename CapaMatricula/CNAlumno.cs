@@ -15,17 +15,17 @@ namespace CapaNegocio {
         public DataTable ListarAlumNoMatric() {
             return obj.ListarAlumNoMatric();
         }
-        public string IngresarPerso(string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
-            return obj.IngresarPerso(nom, ape, telef, dni, email, sexo, fech, dirrecion, distri);
+        public int IngresarPerso(int idper, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[] foto) {
+            return obj.IngresarPerso(idper, nom, ape, telef, dni, email, sexo, fech, dirrecion, distri, foto);
         }
 
         public DataTable IngresarAlum(int id_carrera, int id_perso) {
             return obj.IngresarAlum(id_carrera, id_perso);
         }
         
-        public DataTable ListarUltAlum() {
+        /*public DataTable ListarUltAlum() {
             return obj.ListarUltAlum();
-        }
+        }*/
 
         public DataTable BuscarAlumID(string cod) {
             return obj.BuscarAlumID(cod);
@@ -39,8 +39,8 @@ namespace CapaNegocio {
             return obj.BuscarAlum(num, cod_a, ape);
         }
 
-        public string ModificarAlum(int id, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
-            return obj.ModificarAlum(id, nom, ape, telef, dni, email, sexo, fech, dirrecion, distri);
+        public string ModificarAlum(int id, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[] foto) {
+            return obj.ModificarAlum(id, nom, ape, telef, dni, email, sexo, fech, dirrecion, distri, foto);
         }
 
         public string EliminarAlum() {

@@ -68,6 +68,9 @@
             this.lblNomUsu = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnMostrar = new System.Windows.Forms.Panel();
+            this.crearUnBackUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaurarDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaSoporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -137,7 +140,7 @@
             this.ingresarAlumnoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresarApoderadoToolStripMenuItem});
             this.ingresarAlumnoToolStripMenuItem.Name = "ingresarAlumnoToolStripMenuItem";
-            this.ingresarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.ingresarAlumnoToolStripMenuItem.Text = "Registrar Alumno";
             // 
             // ingresarApoderadoToolStripMenuItem
@@ -157,7 +160,7 @@
             // registrarDocenteToolStripMenuItem
             // 
             this.registrarDocenteToolStripMenuItem.Name = "registrarDocenteToolStripMenuItem";
-            this.registrarDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarDocenteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.registrarDocenteToolStripMenuItem.Text = "Registrar Docente";
             // 
             // matriculaToolStripMenuItem
@@ -227,6 +230,10 @@
             // 
             // backUpsToolStripMenuItem
             // 
+            this.backUpsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearUnBackUpToolStripMenuItem,
+            this.restaurarDBToolStripMenuItem,
+            this.ayudaSoporteToolStripMenuItem});
             this.backUpsToolStripMenuItem.Name = "backUpsToolStripMenuItem";
             this.backUpsToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.backUpsToolStripMenuItem.Text = "BackUps";
@@ -530,6 +537,26 @@
             this.pnMostrar.Size = new System.Drawing.Size(915, 508);
             this.pnMostrar.TabIndex = 14;
             // 
+            // crearUnBackUpToolStripMenuItem
+            // 
+            this.crearUnBackUpToolStripMenuItem.Name = "crearUnBackUpToolStripMenuItem";
+            this.crearUnBackUpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearUnBackUpToolStripMenuItem.Text = "Crear un BackUp";
+            this.crearUnBackUpToolStripMenuItem.Click += new System.EventHandler(this.CrearUnBackUpToolStripMenuItem_Click);
+            // 
+            // restaurarDBToolStripMenuItem
+            // 
+            this.restaurarDBToolStripMenuItem.Name = "restaurarDBToolStripMenuItem";
+            this.restaurarDBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restaurarDBToolStripMenuItem.Text = "Restaurar DB";
+            this.restaurarDBToolStripMenuItem.Click += new System.EventHandler(this.RestaurarDBToolStripMenuItem_Click);
+            // 
+            // ayudaSoporteToolStripMenuItem
+            // 
+            this.ayudaSoporteToolStripMenuItem.Name = "ayudaSoporteToolStripMenuItem";
+            this.ayudaSoporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ayudaSoporteToolStripMenuItem.Text = "Ayuda - Soporte";
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,5 +636,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem backUpsToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem crearUnBackUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restaurarDBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaSoporteToolStripMenuItem;
     }
 }

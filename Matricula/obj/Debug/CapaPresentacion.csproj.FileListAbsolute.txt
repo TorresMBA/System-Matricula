@@ -88,3 +88,8 @@ D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Login.FrmListarUsuario.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Login.FrmVistaUsu.resources
 D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Alumno.FrmAlumNoMatr.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Controles.UCBuscarAlum.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Controles.UCBuscarDocen.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Controles.UCBuscarEmple.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Controles.UCBuscarUsu.resources
+D:\Personal\Documentos\Visual Studio 2019\Projects\Matricula\Matricula\obj\Debug\Matricula.Empleado.FrmRestoreBackUp.resources

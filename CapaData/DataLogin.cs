@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;   
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +25,7 @@ namespace CapaData {
                     CacheLogin.IdUser = reader.GetInt32(0);
                     CacheLogin.NomUsu = reader.GetString(1);
                     CacheLogin.PassUsu = reader.GetString(2);
-                    CacheLogin.Posiicion = reader.GetInt32(3);
+                    CacheLogin.Posiicion = reader.GetInt32(3);              
                 }
                 return true;
             } else {

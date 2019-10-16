@@ -47,6 +47,7 @@
     <Compile Include="CNEmpleado.cs" />
     <Compile Include="CNGeneral.cs" />
     <Compile Include="CNLogin.cs" />
+    <Compile Include="CNUsuario.cs" />
     <Compile Include="CNUtilitario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -26,18 +26,21 @@ namespace CapaData {
             return tb;
         }
 
-        public DataTable ListarUltAlum() {
+        /*public DataTable ListarUltAlum() {
             DataTable tb = new DataTable();
             conectar.ConnectionString = DataConexion.cn;
             SqlDataAdapter da = new SqlDataAdapter("ULTIMA_PERSO", conectar);
             da.Fill(tb);
             return tb;
-        }
+        }*/
 
-        public string IngresarPerso(string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
+        public int IngresarPerso(int idper, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[]foto) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("ING_PER", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@IDPER", SqlDbType.Int).Value = idper;
+            cmd.Parameters["@IDPER"].Direction = ParameterDirection.Output;
+
             cmd.Parameters.Add("@NOM", SqlDbType.VarChar, 30).Value = nom;
             cmd.Parameters.Add("@APE", SqlDbType.VarChar, 30).Value = ape;
             cmd.Parameters.Add("@TELF", SqlDbType.Char, 9).Value = telef;
@@ -49,14 +52,16 @@ namespace CapaData {
             cmd.Parameters.Add("@DIREC", SqlDbType.VarChar, 60).Value = dirrecion;
             cmd.Parameters.Add("@IDDIS", SqlDbType.Int).Value = distri;
             cmd.Parameters.Add("@NIVEL", SqlDbType.VarChar, 20).Value = "Alumno";
+            cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = foto;
             try {
                 conectar.Open();
                 cmd.ExecuteNonQuery();
-                conectar.Close();
-                return "Todo Ok";
+                return int.Parse(cmd.Parameters[0].Value.ToString());            
             } catch(Exception e) {
                 conectar.Close();
-                return e.Message;
+                return 0;
+            } finally {
+                conectar.Close();
             }
         }
 
@@ -97,7 +102,7 @@ namespace CapaData {
             return tb;
         }
 
-        public string ModificarAlum(int id, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri) {
+        public string ModificarAlum(int id, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[] foto) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("MODF_ALUM", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -112,6 +117,7 @@ namespace CapaData {
             cmd.Parameters.Add("@EST", SqlDbType.Char, 1).Value = "A";
             cmd.Parameters.Add("@DIREC", SqlDbType.VarChar, 60).Value = dirrecion;
             cmd.Parameters.Add("@IDDIS", SqlDbType.Int).Value = distri;
+            cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = foto;
             try {
                 conectar.Open();
                 cmd.ExecuteNonQuery();

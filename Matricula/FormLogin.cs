@@ -55,8 +55,7 @@ namespace Matricula {
                             alumno.FormClosed += CerrarSesion;
                             notifi1.ShowBalloonTip(200);
                             this.Hide();
-                        }
-                        
+                        }                      
                     } else {
                         mensaje("Usuario o Contraseaña Incorrecto, Intente Nuevamente");
                         txtPass.Text = "Password";

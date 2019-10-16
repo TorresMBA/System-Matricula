@@ -178,7 +178,7 @@
             this.GridDocen.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridDocen.EnableHeadersVisualStyles = false;
             this.GridDocen.GridColor = System.Drawing.Color.SteelBlue;
-            this.GridDocen.Location = new System.Drawing.Point(0, 143);
+            this.GridDocen.Location = new System.Drawing.Point(101, 143);
             this.GridDocen.Name = "GridDocen";
             this.GridDocen.ReadOnly = true;
             this.GridDocen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -198,8 +198,9 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.GridDocen.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridDocen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridDocen.Size = new System.Drawing.Size(911, 327);
+            this.GridDocen.Size = new System.Drawing.Size(737, 327);
             this.GridDocen.TabIndex = 15;
+            this.GridDocen.DoubleClick += new System.EventHandler(this.GridDocen_DoubleClick);
             // 
             // FrmVistaDocen
             // 
@@ -214,6 +215,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVistaDocen";
             this.Text = "FrmVistaDocen";
+            this.Activated += new System.EventHandler(this.FrmVistaDocen_Activated);
+            this.Load += new System.EventHandler(this.FrmVistaDocen_Load);
             this.pnSuperior.ResumeLayout(false);
             this.pnSuperior.PerformLayout();
             this.groupBox1.ResumeLayout(false);

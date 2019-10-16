@@ -26,7 +26,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIEAlumno));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblid = new System.Windows.Forms.Label();
+            this.cboCarrera = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cboApo = new System.Windows.Forms.ComboBox();
             this.lblOpe = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.d = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,13 +57,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cboCarrera = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cboApo = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -108,6 +111,36 @@
             this.lblid.TabIndex = 27;
             this.lblid.Text = "-";
             // 
+            // cboCarrera
+            // 
+            this.cboCarrera.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboCarrera.FormattingEnabled = true;
+            this.cboCarrera.Location = new System.Drawing.Point(157, 376);
+            this.cboCarrera.Name = "cboCarrera";
+            this.cboCarrera.Size = new System.Drawing.Size(139, 25);
+            this.cboCarrera.TabIndex = 23;
+            this.cboCarrera.Text = "Selecione...";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label12.Location = new System.Drawing.Point(13, 380);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 21);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Carrera:";
+            // 
+            // cboApo
+            // 
+            this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboApo.FormattingEnabled = true;
+            this.cboApo.Location = new System.Drawing.Point(527, 332);
+            this.cboApo.Name = "cboApo";
+            this.cboApo.Size = new System.Drawing.Size(139, 25);
+            this.cboApo.TabIndex = 28;
+            this.cboApo.Text = "Selecione...";
+            // 
             // lblOpe
             // 
             this.lblOpe.AutoSize = true;
@@ -117,6 +150,16 @@
             this.lblOpe.Size = new System.Drawing.Size(14, 19);
             this.lblOpe.TabIndex = 25;
             this.lblOpe.Text = "-";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label13.Location = new System.Drawing.Point(379, 327);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 21);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Apoderado:";
             // 
             // d
             // 
@@ -161,7 +204,7 @@
             // txtDirrecion
             // 
             this.txtDirrecion.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.txtDirrecion.Location = new System.Drawing.Point(160, 335);
+            this.txtDirrecion.Location = new System.Drawing.Point(160, 328);
             this.txtDirrecion.Name = "txtDirrecion";
             this.txtDirrecion.Size = new System.Drawing.Size(136, 24);
             this.txtDirrecion.TabIndex = 20;
@@ -170,7 +213,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label10.Location = new System.Drawing.Point(15, 338);
+            this.label10.Location = new System.Drawing.Point(15, 331);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 21);
             this.label10.TabIndex = 19;
@@ -320,13 +363,15 @@
             // pnSuperior
             // 
             this.pnSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pnSuperior.Controls.Add(this.pbFoto);
+            this.pnSuperior.Controls.Add(this.btnFoto);
             this.pnSuperior.Controls.Add(this.lblTitulo);
             this.pnSuperior.Controls.Add(this.pictureBox1);
             this.pnSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSuperior.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnSuperior.Name = "pnSuperior";
-            this.pnSuperior.Size = new System.Drawing.Size(757, 136);
+            this.pnSuperior.Size = new System.Drawing.Size(757, 146);
             this.pnSuperior.TabIndex = 4;
             // 
             // lblTitulo
@@ -345,7 +390,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 133);
+            this.pictureBox1.Size = new System.Drawing.Size(162, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -378,45 +423,28 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
-            // cboCarrera
+            // btnFoto
             // 
-            this.cboCarrera.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cboCarrera.FormattingEnabled = true;
-            this.cboCarrera.Location = new System.Drawing.Point(157, 383);
-            this.cboCarrera.Name = "cboCarrera";
-            this.cboCarrera.Size = new System.Drawing.Size(139, 25);
-            this.cboCarrera.TabIndex = 23;
-            this.cboCarrera.Text = "Selecione...";
+            this.btnFoto.BackColor = System.Drawing.Color.DarkGray;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoto.Location = new System.Drawing.Point(648, 120);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(106, 23);
+            this.btnFoto.TabIndex = 3;
+            this.btnFoto.Text = "Ingresar Foto";
+            this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
             // 
-            // label12
+            // pbFoto
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label12.Location = new System.Drawing.Point(13, 387);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 21);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Carrera:";
-            // 
-            // cboApo
-            // 
-            this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cboApo.FormattingEnabled = true;
-            this.cboApo.Location = new System.Drawing.Point(527, 339);
-            this.cboApo.Name = "cboApo";
-            this.cboApo.Size = new System.Drawing.Size(139, 25);
-            this.cboApo.TabIndex = 28;
-            this.cboApo.Text = "Selecione...";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label13.Location = new System.Drawing.Point(379, 334);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 21);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Apoderado:";
+            this.pbFoto.BackColor = System.Drawing.Color.White;
+            this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
+            this.pbFoto.Location = new System.Drawing.Point(648, 3);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(106, 111);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 15;
+            this.pbFoto.TabStop = false;
             // 
             // FrmIEAlumno
             // 
@@ -436,6 +464,7 @@
             this.pnSuperior.ResumeLayout(false);
             this.pnSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,5 +503,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cboApo;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

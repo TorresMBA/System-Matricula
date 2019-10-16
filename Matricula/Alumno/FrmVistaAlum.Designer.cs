@@ -94,6 +94,7 @@
             this.GridAlum.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridAlum.Size = new System.Drawing.Size(911, 327);
             this.GridAlum.TabIndex = 0;
+            this.GridAlum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAlum_CellContentClick);
             this.GridAlum.DoubleClick += new System.EventHandler(this.View1_DoubleClick);
             // 
             // label1
@@ -169,6 +170,7 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // pnSuperior
             // 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace CapaMatricula {
+namespace CapaNegocio {
     public class CNEmpleado {
         CapaData.DataEmpleado obj = new CapaData.DataEmpleado();
         public DataTable ListarEmple() {

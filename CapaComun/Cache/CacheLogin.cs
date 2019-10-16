@@ -10,6 +10,5 @@ namespace CapaComun.Cache {
         public static string NomUsu { get; set; }
         public static string PassUsu { get; set; }
         public static int Posiicion { get; set; }
-
     }
 }

@@ -47,11 +47,12 @@ INSERT INTO DISTRITO VALUES('Cercado de Lima'),
 --
 -- P E R S O N A
 --
-create TABLE PERSONA (
+CREATE TABLE PERSONA (
 ID_PERSO INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
 NOM_PERSO VARCHAR(50),
 APE_PERSO VARCHAR(50),
 TELEFONO VARCHAR(9),
+FOTO IMAGE,
 DNI CHAR(9),
 EMAIL VARCHAR(70),
 SEXO CHAR(1),
@@ -62,15 +63,15 @@ ID_DIS INT REFERENCES DISTRITO(ID_DIS),
 NIVEL VARCHAR(15)
 )
 
-INSERT INTO PERSONA VALUES('Brian','Torres', '972101160','72816121','bryan98tm@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',1,'Alumno'),
-						  ('Abigail','Neyra','958594223','12345678','GianinaNeyraAL@gmail.com','F','1998-06-09','A','Angamos',7,'Alumno'),
-						  ('Jhon','Valverde', '951753852','12345678','jhon98@gmail.com','M','2000-01-20','A','MZ T Lt 1-A',2,'Alumno'),
-						  ('Damaris','Camalgo', '995979223','3216547','damaris22@gmail.com','F','1995-07-12','A','MZ T Lt 1-A',3,'Alumno'),
-						  ('Karen','Pachon', '987654321','7418222','karen@gmail.com','F','1998-11-01','A','',1,'Alumno'),
-						  ('Prur6bas#1','Prubeba!', '123456789','1234567','1234567@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',5,'Alumno'),
-						  ('Maestro1','Maestro1', '123456789','1234567','maestro1@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',4,'Maestro'),
-						  ('Maestro2','Maestro2', '123456789','1234567','maestro2@gmail.com','M','1800-07-29','A','MZ T Lt 1-A',2,'Maestro'),
-						  ('Admin','admin', '987654321','1234567','admin@gmail.com','F','1980-12-20','A','MZ T Lt 1-A',3,'Administrativo')
+INSERT INTO PERSONA VALUES('Brian','Torres', '972101160',NULL,'72816121','bryan98tm@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',1,'Alumno'),
+						  ('Abigail','Neyra','958594223',NULL,'12345678','GianinaNeyraAL@gmail.com','F','1998-06-09','A','Angamos',7,'Alumno'),
+						  ('Jhon','Valverde', '951753852',NULL,'12345678','jhon98@gmail.com','M','2000-01-20','A','MZ T Lt 1-A',2,'Alumno'),
+						  ('Damaris','Camalgo', '995979223',NULL,'3216547','damaris22@gmail.com','F','1995-07-12','A','MZ T Lt 1-A',3,'Alumno'),
+						  ('Karen','Pachon', '987654321',NULL,'7418222','karen@gmail.com','F','1998-11-01','A','',1,'Alumno'),
+						  ('Prur6bas#1','Prubeba!', '123456789',NULL,'1234567','1234567@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',5,'Alumno'),
+						  ('Maestro1','Maestro1', '123456789',NULL,'1234567','maestro1@gmail.com','M','1998-06-29','A','MZ T Lt 1-A',4,'Maestro'),
+						  ('Maestro2','Maestro2', '123456789',NULL,'1234567','maestro2@gmail.com','M','1800-07-29','A','MZ T Lt 1-A',2,'Maestro'),
+						  ('Admin','admin', '987654321',NULL,'1234567','admin@gmail.com','F','1980-12-20','A','MZ T Lt 1-A',3,'Administrativo')
 --
 -- A P O D E R A D O
 --
@@ -90,7 +91,7 @@ FOREIGN KEY (ID_DIS) REFERENCES DISTRITO(ID_DIS)
 )
 
 INSERT INTO APODERADO VALUES('Juan', 'Torres', 'Padre','12345678' , '12-07-1969','995509218','S','AAHH Mateo Pumacahua','M',1),
-							(':(', 'Menacho', 'Abuela','12345678', '08-04-1972','995979223','S','AAHH Mateo Pumacahua','M',1),
+							('Reyna', 'Menacho', 'Abuela','12345678', '08-04-1972','995979223','S','AAHH Mateo Pumacahua','M',1),
 							('Pablo', 'Escobar', 'Tio','12345678','12-01-1991','123456789','D','AAHH Mateo Pumacahua','M',3),
 							('Dionica', 'Valverde', 'Abuela','12345678' ,'11-11-1950','995509218','C','AAHH Mateo Pumacahua','M',5),
 							('Juan', 'Torres', 'Padre','12345678', '01-12-1998','972101160','V','AAHH Mateo Pumacahua','M',2),
@@ -355,6 +356,23 @@ GO
 
 EXEC COPIADB 'MATRICULA', 'COMPLETO', 0
 GO
+-------------------
+-- Restaurar una Base de Datos
+CREATE PROCEDURE RESTOREDB
+@NOMDB VARCHAR(25),
+@COPIA VARCHAR(25)
+AS
+	DECLARE @SQL VARCHAR(100)
+	EXEC('USE MASTER')
+	EXEC('DROP DATABASE ' + @NOMDB)
+	SET @SQL = 'RESTORE DATABASE ' + @NOMDB + ' FROM DISK = ' + CHAR(39) + 'D:\DB\' + @COPIA + '.BAK' + CHAR(39);
+	EXEC (@SQL);
+GO
+
+EXEC RESTOREDB 'Matricula','MatCompl13-10'
+GO
+-----------------
+
 --
 -- L I S T A D O
 --
@@ -462,10 +480,49 @@ CREATE PROCEDURE INICIAR_SESION
 @USER VARCHAR(25),
 @CONTRA VARCHAR(30)
 AS
-	SELECT * FROM USUARIO WHERE NOM_USU = @USER AND PASS = @CONTRA
+	SELECT U.*, P.FOTO
+	FROM USUARIO U 
+	INNER JOIN ALUMNO A
+	ON U.ID_USU = A.ID_USU
+	INNER JOIN PERSONA P
+	ON P.ID_PERSO = A.ID_PERSO
+	WHERE U.NOM_USU = @USER AND U.PASS = @CONTRA
 GO
 
+EXEC INICIAR_SESION 'BTORRESM98','123'
+GO
+--
+CREATE PROCEDURE MAEST
+@USER VARCHAR(25)
+AS
+	SELECT U.*, P.FOTO
+	FROM USUARIO U
+	INNER JOIN MAESTRO M
+	ON U.ID_USU = M.ID_USU
+	INNER JOIN EMPLEADO E
+	ON M.ID_EMPLEADO = E.ID_EMPLEADO
+	INNER JOIN PERSONA P
+	ON E.ID_PERSO = P.ID_PERSO
+	WHERE U.NOM_USU = 'MM198'
+GO
 
+EXEC MAEST 'MM198'
+GO
+
+--
+CREATE PROCEDURE ADMINIS
+@USER VARCHAR(25)
+AS
+	SELECT U.*, P.FOTO
+	FROM USUARIO U
+	INNER JOIN ADMINISTRATIVO AD
+	ON U.ID_USU = AD.ID_USU
+	INNER JOIN EMPLEADO E
+	ON AD.ID_EMPLEADO = E.ID_EMPLEADO
+	INNER JOIN PERSONA P
+	ON P.ID_PERSO = E.ID_PERSO
+	WHERE U.NOM_USU = @USER
+GO
 --------
 CREATE PROCEDURE DATOS_USER
 @COD VARCHAR(25)
@@ -541,6 +598,14 @@ GO
 EXEC LISTAR_CURSOS 'ANEYRAF98'
 GO
 --
+--
+--
+CREATE PROCEDURE LISTAR_USU
+AS
+	SELECT U.ID_USU, U.NOM_USU, U.PASS, P.NOM_POSI FROM USUARIO U INNER JOIN POSICION P
+	ON U.ID_POSI = P.ID_POSI
+GO
+--
 -- I N S E R C I O N
 --
 ------------------------
@@ -562,14 +627,16 @@ AS
 GO
 
 EXEC ING_APO 'Apode1','Apode','Madre','12345678','1998-01-20','995979223','Soltero','AAHH Mateo Pumacahua','F',5
-go
+GO
 -----------------------
 -- Ingresar Personas --
 -----------------------
 CREATE PROCEDURE ING_PER
+	@IDPER INT OUTPUT,
 	@NOM VARCHAR(30),
 	@APE VARCHAR(30),
 	@TELF VARCHAR(9),
+	@FOTO IMAGE,
 	@DNI VARCHAR(8),
 	@EMAIL VARCHAR(40),
 	@SEXO CHAR(1),
@@ -578,24 +645,25 @@ CREATE PROCEDURE ING_PER
 	@DIREC VARCHAR(60),
 	@IDDIS INT,
 	@NIVEL VARCHAR(25)
-AS
-	INSERT INTO PERSONA VALUES(@NOM, @APE, @TELF, @DNI, @EMAIL, @SEXO, @NAC, @EST, @DIREC, @IDDIS, @NIVEL)
-GO
+AS 
+	INSERT INTO PERSONA VALUES(@NOM, @APE, @TELF, @FOTO, @DNI, @EMAIL, @SEXO, @NAC, @EST, @DIREC, @IDDIS, @NIVEL)
+	SET @IDPER = @@IDENTITY
+GO 
 
-EXEC ING_PER 'Alan','Garcia','995509218','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
-EXEC ING_PER 'Juan','Lee','934626785','12345678','alan@gmail.com','F','1986-01-20','A','asdasd',1,'Maestro'
-EXEC ING_PER 'Anthony','Menacho','972101160','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
+EXEC ING_PER 'Alan','Garcia','995509218',NULL,'12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
+EXEC ING_PER 'Juan','Lee','934626785',NULL,'12345678','alan@gmail.com','F','1986-01-20','A','asdasd',1,'Maestro'
+EXEC ING_PER 'Anthony','Menacho',NULL,'972101160','12345678','alan@gmail.com','M','1986-01-20','A','asdasd',1,'Alumno'
 GO
 ---------------------
 -- Ingresar Alumno --
 ---------------------
-create PROCEDURE INSER_ALUM
+CREATE PROCEDURE INSER_ALUM
 @IDAPODE INT,
 @IDPERSO INT
 AS
 	INSERT INTO ALUMNO VALUES(@IDAPODE, NULL, @IDPERSO, NULL, NULL)
 GO
-
+select * from ALUMNO
 EXEC INSER_ALUM 7,10
 EXEC INSER_ALUM 9,14
 GO
@@ -662,9 +730,10 @@ CREATE PROCEDURE MODF_ALUM
 	@NAC DATE,
 	@EST CHAR(1),
 	@DIREC VARCHAR(60),
-	@IDDIS INT
+	@IDDIS INT,
+	@FOTO IMAGE
 AS
-	UPDATE PERSONA SET NOM_PERSO = @NOM, APE_PERSO = @APE, TELEFONO = @TELF, DNI = @DNI, EMAIL = @EMAIL, SEXO = @SEXO, FECHA_NAC = @NAC, EST_PERSO = @EST, DIRRECION = @DIREC, ID_DIS = @IDDIS WHERE ID_PERSO = @ID
+	UPDATE PERSONA SET NOM_PERSO = @NOM, APE_PERSO = @APE, TELEFONO = @TELF, DNI = @DNI, EMAIL = @EMAIL, SEXO = @SEXO, FECHA_NAC = @NAC, EST_PERSO = @EST, DIRRECION = @DIREC, ID_DIS = @IDDIS, FOTO = @FOTO WHERE ID_PERSO = @ID
 GO
 
 EXEC MODF_ALUM 1,'Modificado1','ApeModificado1','123456789','12345678','corremodificado@gmail.com','M','1998-06-29','A','Mz T Lt 1-A', 3
@@ -689,7 +758,7 @@ CREATE PROCEDURE BUSCAR_ALUM
 @COD VARCHAR(15)
 AS
 	SELECT P.ID_PERSO, A.ID_ALUM, A.COD_ALUM, P.NOM_PERSO, C.NOM_CARRERA, P.APE_PERSO, P.DNI, P.FECHA_NAC,
-	AP.NOM_APODE, AP.PARENTEZCO, P.TELEFONO, P.EMAIL, P.SEXO, P.DIRRECION, D.NOM_DIS, EST_PERSO 
+	AP.NOM_APODE, AP.PARENTEZCO, P.TELEFONO, P.EMAIL, P.SEXO, P.DIRRECION, D.NOM_DIS, EST_PERSO, P.FOTO
 	FROM ALUMNO A
 	INNER JOIN PERSONA P
 	ON A.ID_PERSO = P.ID_PERSO
@@ -758,14 +827,14 @@ GO
 --------------------------------------------
 -- Trigger para insertar Codigo de Alumno --
 --------------------------------------------
-CREATE TRIGGER TR_CODALUM
+/*CREATE TRIGGER TR_CODALUM
 ON ALUMNO FOR INSERT
 AS
 	DECLARE @NOM CHAR(1), @APE VARCHAR(25), @FECHA CHAR(2), @ID INT, @SELEC VARCHAR(300)
 	SET @SELEC = (SELECT TOP 1 ID_PERSO FROM PERSONA ORDER BY ID_PERSO DESC)
 	SELECT @ID = ID_PERSO, @NOM = LEFT(NOM_PERSO, 1),  @APE = APE_PERSO,  @FECHA = RIGHT(YEAR(FECHA_NAC),2) FROM PERSONA
 	UPDATE ALUMNO SET COD_ALUM = UPPER(CONCAT(@NOM,@APE,@FECHA)) WHERE ALUMNO.ID_PERSO = @ID
-GO
+GO*/
 -------
 CREATE TRIGGER TR_ALUM
 ON PERSONA FOR INSERT
@@ -792,4 +861,4 @@ AS
 	INNER JOIN PERSONA P 
 	ON P.ID_PERSO = A.ID_PERSO
 	WHERE A.ID_PERSO = @IDPERSO
-GO 
+GO

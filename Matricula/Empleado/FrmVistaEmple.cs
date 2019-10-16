@@ -13,10 +13,27 @@ namespace Matricula.Empleado {
         public FrmVistaEmple() {
             InitializeComponent();
         }
+        CapaNegocio.CNEmpleado emple = new CapaNegocio.CNEmpleado();
 
         private void BtnMenu_Click(object sender, EventArgs e) {
             FrmListarEmpleado obj = new FrmListarEmpleado();
             obj.Show();
+        }
+
+        private void FrmVistaEmple_Activated(object sender, EventArgs e) {
+            GridEmple.DataSource = emple.ListarEmple();
+        }
+
+        private void GridAlum_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            
+        }
+
+        private void GridAlum_DoubleClick(object sender, EventArgs e) {
+
+        }
+
+        private void FrmVistaEmple_Load(object sender, EventArgs e) {
+            GridEmple.DataSource = emple.ListarEmple();
         }
     }
 }

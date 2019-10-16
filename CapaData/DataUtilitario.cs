@@ -13,7 +13,7 @@ namespace CapaData {
 
         public DataTable DBLis() {
             conectar.ConnectionString = DataConexion.cn;
-            SqlDataAdapter da = new SqlDataAdapter("SELECT NAME, DBID FROM SYSDATABASES WHERE DBID > 4", conectar);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT NAME, DBID, crdate FROM SYSDATABASES WHERE DBID > 4", conectar);
             da.Fill(tb);
             return tb;
         }
@@ -32,6 +32,16 @@ namespace CapaData {
                 return "Todo ok";
             } catch(Exception ex) {
                 return "Error: " + ex.Message;
+            }
+        }
+
+        public string Restaurar(string @bd, string @copia) {
+            conectar.ConnectionString = DataConexion.cn;
+            try {
+                SqlDataAdapter da = new SqlDataAdapter("RESTOREDB '" + @bd + "','" + @copia + "'", conectar);
+                return "Restauración satisfactoria, ...";
+            } catch(Exception ex) {
+                return "Restauración fallida, ....";
             }
         }
     }
