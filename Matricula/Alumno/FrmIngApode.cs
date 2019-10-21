@@ -32,10 +32,10 @@ namespace Matricula.Alumno {
         private void BtnGuardar_Click_1(object sender, EventArgs e) {
             FrmIEAlumno obj = new FrmIEAlumno();
             CapaNegocio.CNApoderado apo = new CapaNegocio.CNApoderado();
-            string sql = apo.IngApode(txtNom.Text, txtApe.Text, cboParen.SelectedItem.ToString(), txtDni.Text, Fecha.Text, txtCel.Text, cboEstado.SelectedItem.ToString(), txtDirrecion.Text, cboSexo.Text.Substring(0,1), Convert.ToInt32(cboDistrito.SelectedIndex));
+            string sql = apo.IngApode(txtNom.Text, txtApe.Text, cboParen.SelectedItem.ToString(), txtDni.Text, Fecha.Text, txtCel.Text, cboEstado.SelectedItem.ToString(), txtDirrecion.Text, cboSexo.Text.Substring(0,1), Convert.ToInt32(cboDistrito.SelectedValue));
             obj.lblOpe.Text = "Nuevo";
             obj.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FrmIngApode_Load(object sender, EventArgs e) {

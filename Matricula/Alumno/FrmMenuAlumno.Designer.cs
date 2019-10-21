@@ -38,10 +38,10 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAlum = new System.Windows.Forms.Button();
-            this.btnUsu = new System.Windows.Forms.Button();
+            this.btnMatricula = new System.Windows.Forms.Button();
+            this.btnNotas = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
-            this.btnEmple = new System.Windows.Forms.Button();
+            this.btnHorario = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoA)).BeginInit();
             this.panel2.SuspendLayout();
@@ -174,10 +174,10 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnAlum);
-            this.panel1.Controls.Add(this.btnUsu);
+            this.panel1.Controls.Add(this.btnMatricula);
+            this.panel1.Controls.Add(this.btnNotas);
             this.panel1.Controls.Add(this.btnCursos);
-            this.panel1.Controls.Add(this.btnEmple);
+            this.panel1.Controls.Add(this.btnHorario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -219,37 +219,37 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAlum
+            // btnMatricula
             // 
-            this.btnAlum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlum.FlatAppearance.BorderSize = 0;
-            this.btnAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlum.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlum.Image = ((System.Drawing.Image)(resources.GetObject("btnAlum.Image")));
-            this.btnAlum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlum.Location = new System.Drawing.Point(12, 518);
-            this.btnAlum.Name = "btnAlum";
-            this.btnAlum.Size = new System.Drawing.Size(185, 40);
-            this.btnAlum.TabIndex = 7;
-            this.btnAlum.Text = "Matricula";
-            this.btnAlum.UseVisualStyleBackColor = true;
+            this.btnMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMatricula.FlatAppearance.BorderSize = 0;
+            this.btnMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatricula.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnMatricula.Image")));
+            this.btnMatricula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMatricula.Location = new System.Drawing.Point(12, 518);
+            this.btnMatricula.Name = "btnMatricula";
+            this.btnMatricula.Size = new System.Drawing.Size(185, 40);
+            this.btnMatricula.TabIndex = 7;
+            this.btnMatricula.Text = "Matricula";
+            this.btnMatricula.UseVisualStyleBackColor = true;
             // 
-            // btnUsu
+            // btnNotas
             // 
-            this.btnUsu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsu.FlatAppearance.BorderSize = 0;
-            this.btnUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsu.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.btnUsu.Image = ((System.Drawing.Image)(resources.GetObject("btnUsu.Image")));
-            this.btnUsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsu.Location = new System.Drawing.Point(12, 424);
-            this.btnUsu.Name = "btnUsu";
-            this.btnUsu.Size = new System.Drawing.Size(185, 40);
-            this.btnUsu.TabIndex = 10;
-            this.btnUsu.Text = "Mis Notas";
-            this.btnUsu.UseVisualStyleBackColor = true;
+            this.btnNotas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotas.FlatAppearance.BorderSize = 0;
+            this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotas.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
+            this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotas.Location = new System.Drawing.Point(12, 424);
+            this.btnNotas.Name = "btnNotas";
+            this.btnNotas.Size = new System.Drawing.Size(185, 40);
+            this.btnNotas.TabIndex = 10;
+            this.btnNotas.Text = "Mis Notas";
+            this.btnNotas.UseVisualStyleBackColor = true;
             // 
             // btnCursos
             // 
@@ -268,21 +268,22 @@
             this.btnCursos.UseVisualStyleBackColor = true;
             this.btnCursos.Click += new System.EventHandler(this.BtnDocen_Click);
             // 
-            // btnEmple
+            // btnHorario
             // 
-            this.btnEmple.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmple.FlatAppearance.BorderSize = 0;
-            this.btnEmple.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnEmple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmple.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.btnEmple.Image = ((System.Drawing.Image)(resources.GetObject("btnEmple.Image")));
-            this.btnEmple.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmple.Location = new System.Drawing.Point(12, 340);
-            this.btnEmple.Name = "btnEmple";
-            this.btnEmple.Size = new System.Drawing.Size(185, 40);
-            this.btnEmple.TabIndex = 9;
-            this.btnEmple.Text = "Mi Horario";
-            this.btnEmple.UseVisualStyleBackColor = true;
+            this.btnHorario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHorario.FlatAppearance.BorderSize = 0;
+            this.btnHorario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnHorario.Image = ((System.Drawing.Image)(resources.GetObject("btnHorario.Image")));
+            this.btnHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorario.Location = new System.Drawing.Point(12, 340);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(185, 40);
+            this.btnHorario.TabIndex = 9;
+            this.btnHorario.Text = "Mi Horario";
+            this.btnHorario.UseVisualStyleBackColor = true;
+            this.btnHorario.Click += new System.EventHandler(this.BtnEmple_Click);
             // 
             // FrmMenuAlumno
             // 
@@ -319,14 +320,14 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnUsu;
+        private System.Windows.Forms.Button btnNotas;
         private System.Windows.Forms.Button btnCursos;
-        private System.Windows.Forms.Button btnEmple;
+        private System.Windows.Forms.Button btnHorario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAlum;
+        private System.Windows.Forms.Button btnMatricula;
     }
 }

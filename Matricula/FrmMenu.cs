@@ -103,5 +103,21 @@ namespace Matricula {
             Empleado.FrmRestoreBackUp obj = new Empleado.FrmRestoreBackUp();
             obj.Show();
         }
+
+        private void RegistrarEmp_Click(object sender, EventArgs e) {
+            Empleado.FrmIEEmpleado obj = new Empleado.FrmIEEmpleado();
+            obj.Show();
+        }
+
+        private void RegistrarDocenteToolStripMenuItem_Click(object sender, EventArgs e) {
+            Docente.FrmIEDocente obj = new Docente.FrmIEDocente();
+            obj.lblOpe.Text = "Nuevo";
+            obj.Show();
+        }
+
+        private void IngresarPersonalToolStripMenuItem_Click(object sender, EventArgs e) {
+            Login.FrmIEUsuario obj = new Login.FrmIEUsuario();
+            obj.Show();
+        }
     }
 }

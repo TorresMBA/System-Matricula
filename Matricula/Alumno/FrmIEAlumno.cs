@@ -57,14 +57,13 @@ namespace Matricula.Alumno {
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             if(lblOpe.Text == "Nuevo") {
-                int idper = obj.IngresarPerso(0, txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex), ms.GetBuffer());
-                /*DataTable tb = obj.ListarUltAlum();
-                int id = int.Parse(tb.Rows[0]["ID_PERSO"].ToString());*/
-                obj.IngresarAlum(int.Parse(cboCarrera.SelectedValue.ToString()), idper);
+                int idper = obj.IngresarPerso(0, txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedValue), ms.GetBuffer());
+                obj.IngresarAlum(Convert.ToInt16(cboCarrera.SelectedValue), idper);
+
                 MessageBox.Show("Registrado Correctamente");
                 this.Close();
             } else {
-                string sql = obj.ModificarAlum(int.Parse(lblid.Text), txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedIndex), ms.GetBuffer());
+                string sql = obj.ModificarAlum(int.Parse(lblid.Text), txtNom.Text, txtApe.Text, txtCel.Text, txtDni.Text, txtEmail.Text, cboSexo.SelectedItem.ToString(), Fecha.Text, txtDirrecion.Text, Convert.ToInt16(cboDistrito.SelectedValue), ms.GetBuffer());
                 MessageBox.Show("Modificado Correctamente");
                 this.Close();
             }
@@ -103,6 +102,10 @@ namespace Matricula.Alumno {
             if(resul == DialogResult.OK) {
                 pbFoto.Image = Image.FromFile(abrir.FileName);
             }
+
+        }
+
+        private void CboApo_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
     }

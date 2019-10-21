@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +70,12 @@
     </Compile>
     <Compile Include="Alumno\FrmMenuAlumno.Designer.cs">
       <DependentUpon>FrmMenuAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\FrmSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\FrmSeccion.Designer.cs">
+      <DependentUpon>FrmSeccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumno\FrmVistaAlum.cs">
       <SubType>Form</SubType>
@@ -214,6 +227,12 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\FrmIEUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmIEUsuario.Designer.cs">
+      <DependentUpon>FrmIEUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\FrmListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +244,12 @@
     </Compile>
     <Compile Include="Login\FrmRecuperar.Designer.cs">
       <DependentUpon>FrmRecuperar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\FrmVistaUsu.cs">
       <SubType>Form</SubType>
@@ -242,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\FrmMenuAlumno.resx">
       <DependentUpon>FrmMenuAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\FrmSeccion.resx">
+      <DependentUpon>FrmSeccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\FrmVistaAlum.resx">
       <DependentUpon>FrmVistaAlum.cs</DependentUpon>
@@ -315,11 +343,17 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmIEUsuario.resx">
+      <DependentUpon>FrmIEUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmListarUsuario.resx">
       <DependentUpon>FrmListarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmRecuperar.resx">
       <DependentUpon>FrmRecuperar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmVistaUsu.resx">
       <DependentUpon>FrmVistaUsu.cs</DependentUpon>
@@ -377,6 +411,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -140,6 +140,7 @@
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -319,6 +320,7 @@
             this.Name = "FrmListarDocen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListarDocen";
+            this.Activated += new System.EventHandler(this.FrmListarDocen_Activated);
             this.Load += new System.EventHandler(this.FrmListarDocen_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

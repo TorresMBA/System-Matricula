@@ -88,6 +88,7 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
@@ -97,7 +98,6 @@
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(155, 29);
             this.cboSexo.TabIndex = 19;
-            this.cboSexo.Text = "Selecione...";
             // 
             // label11
             // 
@@ -139,6 +139,7 @@
             // 
             // cboDistrito
             // 
+            this.cboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistrito.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboDistrito.FormattingEnabled = true;
             this.cboDistrito.Items.AddRange(new object[] {
@@ -147,7 +148,6 @@
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(155, 29);
             this.cboDistrito.TabIndex = 14;
-            this.cboDistrito.Text = "Selecione....";
             // 
             // txtDirrecion
             // 
@@ -159,6 +159,7 @@
             // 
             // cboEstado
             // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboEstado.FormattingEnabled = true;
             this.cboEstado.Items.AddRange(new object[] {
@@ -170,7 +171,6 @@
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(155, 29);
             this.cboEstado.TabIndex = 12;
-            this.cboEstado.Text = "Selecione...";
             // 
             // txtCel
             // 
@@ -182,6 +182,7 @@
             // 
             // cboParen
             // 
+            this.cboParen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboParen.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboParen.FormattingEnabled = true;
             this.cboParen.Items.AddRange(new object[] {
@@ -194,7 +195,6 @@
             this.cboParen.Name = "cboParen";
             this.cboParen.Size = new System.Drawing.Size(155, 29);
             this.cboParen.TabIndex = 10;
-            this.cboParen.Text = "Selecione...";
             // 
             // Fecha
             // 

@@ -19,13 +19,13 @@ namespace CapaNegocio {
             return obj.IngresarPerso(idper, nom, ape, telef, dni, email, sexo, fech, dirrecion, distri, foto);
         }
 
-        public DataTable IngresarAlum(int id_carrera, int id_perso) {
+        public string IngresarAlum(int id_carrera, int id_perso) {
             return obj.IngresarAlum(id_carrera, id_perso);
         }
-        
-        /*public DataTable ListarUltAlum() {
-            return obj.ListarUltAlum();
-        }*/
+
+        public string IngresarMatricula(int idalu, string turno, string periodo, int id_seccion, int id_ciclo, string fecha) {
+            return obj.IngresarMatricula(idalu, turno, periodo, id_seccion, id_ciclo, fecha);
+        }
 
         public DataTable BuscarAlumID(string cod) {
             return obj.BuscarAlumID(cod);

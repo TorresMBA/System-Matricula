@@ -21,7 +21,7 @@ namespace CapaNegocio {
         }
 
         public DataTable ListarSec() {
-            return obj.ListarSec();
+            return obj.ListarSeccion();
         }
 
         public DataTable ListarApoS() {
@@ -30,6 +30,22 @@ namespace CapaNegocio {
         
         public DataTable ListarCarrera() {
             return obj.ListarCarrera();
+        }
+
+        public DataTable ListarCiclo() {
+            return obj.ListarCiclo();
+        }
+
+        public DataTable ListarSeccion() {
+            return obj.ListarSeccion();
+        }
+
+        public DataTable ListarPersonas() {
+            return obj.ListarPersonas();
+        }
+
+        public DataTable ListarEmpleados() {
+            return obj.ListarEmpleados();
         }
     }
 }

@@ -46,10 +46,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.GridInfoAlum = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridInfoAlum)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAlum
@@ -256,7 +258,7 @@
             this.GridInfoAlum.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -274,7 +276,7 @@
             this.GridInfoAlum.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridInfoAlum.EnableHeadersVisualStyles = false;
             this.GridInfoAlum.GridColor = System.Drawing.Color.SteelBlue;
-            this.GridInfoAlum.Location = new System.Drawing.Point(12, 336);
+            this.GridInfoAlum.Location = new System.Drawing.Point(122, 0);
             this.GridInfoAlum.Name = "GridInfoAlum";
             this.GridInfoAlum.ReadOnly = true;
             this.GridInfoAlum.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -295,15 +297,24 @@
             this.GridInfoAlum.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridInfoAlum.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.GridInfoAlum.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridInfoAlum.Size = new System.Drawing.Size(615, 201);
+            this.GridInfoAlum.Size = new System.Drawing.Size(387, 201);
             this.GridInfoAlum.TabIndex = 18;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel1.Controls.Add(this.GridInfoAlum);
+            this.panel1.Location = new System.Drawing.Point(12, 336);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(615, 201);
+            this.panel1.TabIndex = 12;
             // 
             // FrmInfoAlum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 590);
-            this.Controls.Add(this.GridInfoAlum);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pnSuperior);
             this.Controls.Add(this.groupBox1);
@@ -317,6 +328,7 @@
             this.pnSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridInfoAlum)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -341,5 +353,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         public System.Windows.Forms.DataGridView GridInfoAlum;
+        private System.Windows.Forms.Panel panel1;
     }
 }

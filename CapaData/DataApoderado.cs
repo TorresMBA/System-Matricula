@@ -13,10 +13,10 @@ namespace CapaData {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("ING_APO", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@NOM", SqlDbType.VarChar, 25).Value = nom;
-            cmd.Parameters.Add("@APE", SqlDbType.VarChar, 25).Value = ape;
+            cmd.Parameters.Add("@NOM", SqlDbType.VarChar, 60).Value = nom;
+            cmd.Parameters.Add("@APE", SqlDbType.VarChar, 60).Value = ape;
             cmd.Parameters.Add("@PAREN", SqlDbType.VarChar, 30).Value = paretezco;
-            cmd.Parameters.Add("@DNI", SqlDbType.VarChar, 9).Value = dni;
+            cmd.Parameters.Add("@DNI", SqlDbType.VarChar, 8).Value = dni;
             cmd.Parameters.Add("@NAC", SqlDbType.DateTime).Value = fech;
             cmd.Parameters.Add("@TELF", SqlDbType.VarChar, 9).Value = telef;
             cmd.Parameters.Add("@EST", SqlDbType.VarChar, 25).Value = estado_c;

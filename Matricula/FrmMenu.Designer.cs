@@ -44,6 +44,9 @@
             this.reporteDeMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backUpsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearUnBackUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaurarDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaSoporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,9 +71,6 @@
             this.lblNomUsu = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnMostrar = new System.Windows.Forms.Panel();
-            this.crearUnBackUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restaurarDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaSoporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -110,8 +110,9 @@
             // ingresarPersonalToolStripMenuItem
             // 
             this.ingresarPersonalToolStripMenuItem.Name = "ingresarPersonalToolStripMenuItem";
-            this.ingresarPersonalToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ingresarPersonalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ingresarPersonalToolStripMenuItem.Text = "Crear Usuario";
+            this.ingresarPersonalToolStripMenuItem.Click += new System.EventHandler(this.IngresarPersonalToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
@@ -126,6 +127,7 @@
             this.RegistrarEmp.Name = "RegistrarEmp";
             this.RegistrarEmp.Size = new System.Drawing.Size(181, 22);
             this.RegistrarEmp.Text = "Registrar Empleados";
+            this.RegistrarEmp.Click += new System.EventHandler(this.RegistrarEmp_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -162,6 +164,7 @@
             this.registrarDocenteToolStripMenuItem.Name = "registrarDocenteToolStripMenuItem";
             this.registrarDocenteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.registrarDocenteToolStripMenuItem.Text = "Registrar Docente";
+            this.registrarDocenteToolStripMenuItem.Click += new System.EventHandler(this.RegistrarDocenteToolStripMenuItem_Click);
             // 
             // matriculaToolStripMenuItem
             // 
@@ -238,6 +241,26 @@
             this.backUpsToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.backUpsToolStripMenuItem.Text = "BackUps";
             this.backUpsToolStripMenuItem.Click += new System.EventHandler(this.BackUpsToolStripMenuItem_Click);
+            // 
+            // crearUnBackUpToolStripMenuItem
+            // 
+            this.crearUnBackUpToolStripMenuItem.Name = "crearUnBackUpToolStripMenuItem";
+            this.crearUnBackUpToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.crearUnBackUpToolStripMenuItem.Text = "Crear un BackUp";
+            this.crearUnBackUpToolStripMenuItem.Click += new System.EventHandler(this.CrearUnBackUpToolStripMenuItem_Click);
+            // 
+            // restaurarDBToolStripMenuItem
+            // 
+            this.restaurarDBToolStripMenuItem.Name = "restaurarDBToolStripMenuItem";
+            this.restaurarDBToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.restaurarDBToolStripMenuItem.Text = "Restaurar DB";
+            this.restaurarDBToolStripMenuItem.Click += new System.EventHandler(this.RestaurarDBToolStripMenuItem_Click);
+            // 
+            // ayudaSoporteToolStripMenuItem
+            // 
+            this.ayudaSoporteToolStripMenuItem.Name = "ayudaSoporteToolStripMenuItem";
+            this.ayudaSoporteToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.ayudaSoporteToolStripMenuItem.Text = "Ayuda - Soporte";
             // 
             // panel1
             // 
@@ -496,6 +519,7 @@
             // lblPosicio
             // 
             this.lblPosicio.AutoSize = true;
+            this.lblPosicio.ForeColor = System.Drawing.Color.White;
             this.lblPosicio.Location = new System.Drawing.Point(212, 81);
             this.lblPosicio.Name = "lblPosicio";
             this.lblPosicio.Size = new System.Drawing.Size(10, 13);
@@ -505,6 +529,7 @@
             // lblCod
             // 
             this.lblCod.AutoSize = true;
+            this.lblCod.ForeColor = System.Drawing.Color.White;
             this.lblCod.Location = new System.Drawing.Point(212, 48);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(10, 13);
@@ -536,26 +561,6 @@
             this.pnMostrar.Name = "pnMostrar";
             this.pnMostrar.Size = new System.Drawing.Size(915, 508);
             this.pnMostrar.TabIndex = 14;
-            // 
-            // crearUnBackUpToolStripMenuItem
-            // 
-            this.crearUnBackUpToolStripMenuItem.Name = "crearUnBackUpToolStripMenuItem";
-            this.crearUnBackUpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.crearUnBackUpToolStripMenuItem.Text = "Crear un BackUp";
-            this.crearUnBackUpToolStripMenuItem.Click += new System.EventHandler(this.CrearUnBackUpToolStripMenuItem_Click);
-            // 
-            // restaurarDBToolStripMenuItem
-            // 
-            this.restaurarDBToolStripMenuItem.Name = "restaurarDBToolStripMenuItem";
-            this.restaurarDBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.restaurarDBToolStripMenuItem.Text = "Restaurar DB";
-            this.restaurarDBToolStripMenuItem.Click += new System.EventHandler(this.RestaurarDBToolStripMenuItem_Click);
-            // 
-            // ayudaSoporteToolStripMenuItem
-            // 
-            this.ayudaSoporteToolStripMenuItem.Name = "ayudaSoporteToolStripMenuItem";
-            this.ayudaSoporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ayudaSoporteToolStripMenuItem.Text = "Ayuda - Soporte";
             // 
             // FrmMenu
             // 

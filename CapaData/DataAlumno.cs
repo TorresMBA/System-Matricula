@@ -26,51 +26,50 @@ namespace CapaData {
             return tb;
         }
 
-        /*public DataTable ListarUltAlum() {
-            DataTable tb = new DataTable();
-            conectar.ConnectionString = DataConexion.cn;
-            SqlDataAdapter da = new SqlDataAdapter("ULTIMA_PERSO", conectar);
-            da.Fill(tb);
-            return tb;
-        }*/
-
-        public int IngresarPerso(int idper, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[]foto) {
+        public int IngresarPerso(int idper, string nom, string ape, string telef, string dni, string email, string sexo, string fech, string dirrecion, int distri, byte[] foto) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("ING_PER", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@IDPER", SqlDbType.Int).Value = idper;
             cmd.Parameters["@IDPER"].Direction = ParameterDirection.Output;
 
-            cmd.Parameters.Add("@NOM", SqlDbType.VarChar, 30).Value = nom;
-            cmd.Parameters.Add("@APE", SqlDbType.VarChar, 30).Value = ape;
-            cmd.Parameters.Add("@TELF", SqlDbType.Char, 9).Value = telef;
-            cmd.Parameters.Add("@DNI", SqlDbType.VarChar, 9).Value = dni;
-            cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar, 40).Value = email;
+            cmd.Parameters.Add("@NOM", SqlDbType.VarChar, 60).Value = nom;
+            cmd.Parameters.Add("@APE", SqlDbType.VarChar, 60).Value = ape;
+            cmd.Parameters.Add("@TELF", SqlDbType.VarChar, 9).Value = telef;
+            cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = foto;
+            cmd.Parameters.Add("@DNI", SqlDbType.VarChar, 8).Value = dni;
+            cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar, 70).Value = email;
             cmd.Parameters.Add("@SEXO", SqlDbType.Char, 1).Value = sexo;
             cmd.Parameters.Add("@NAC", SqlDbType.DateTime).Value = fech;
             cmd.Parameters.Add("@EST", SqlDbType.Char, 1).Value = "A";
             cmd.Parameters.Add("@DIREC", SqlDbType.VarChar, 60).Value = dirrecion;
             cmd.Parameters.Add("@IDDIS", SqlDbType.Int).Value = distri;
-            cmd.Parameters.Add("@NIVEL", SqlDbType.VarChar, 20).Value = "Alumno";
-            cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = foto;
+            cmd.Parameters.Add("@NIVEL", SqlDbType.VarChar, 25).Value = "Alumno";
             try {
                 conectar.Open();
                 cmd.ExecuteNonQuery();
-                return int.Parse(cmd.Parameters[0].Value.ToString());            
+                return int.Parse(cmd.Parameters[0].Value.ToString());
             } catch(Exception e) {
                 conectar.Close();
                 return 0;
-            } finally {
-                conectar.Close();
             }
         }
 
-        public DataTable IngresarAlum(int id_carrera, int id_perso) {
-            DataTable tb = new DataTable();
-            conectar.ConnectionString = DataConexion.cn;
-            SqlDataAdapter da = new SqlDataAdapter("ACTUALIZAR_ALUM '" + id_carrera + "', '" + id_perso + "'", conectar);
-            da.Fill(tb);
-            return tb;
+        public string IngresarAlum(int id_carrera, int id_perso) {
+            SqlCommand cmd = new SqlCommand("ACTUALIZAR_ALUM", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DATO", SqlDbType.Int).Value = id_carrera;
+            cmd.Parameters.Add("@IDPERSO", SqlDbType.Int).Value = id_perso;
+            try {
+                if(conectar.State == ConnectionState.Closed) {
+                    conectar.Open();
+                }
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+                return "Ok";
+            } catch(Exception ex) {
+                return ex.Message;
+            }
         }
 
         public DataTable BuscarAlumID(string cod) {
@@ -118,6 +117,27 @@ namespace CapaData {
             cmd.Parameters.Add("@DIREC", SqlDbType.VarChar, 60).Value = dirrecion;
             cmd.Parameters.Add("@IDDIS", SqlDbType.Int).Value = distri;
             cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = foto;
+            try {
+                conectar.Open();
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+                return "Todo Ok";
+            } catch(Exception e) {
+                conectar.Close();
+                return e.Message;
+            }
+        }
+
+        public string IngresarMatricula(int idalu, string turno, string periodo, int id_seccion, int id_ciclo, string fecha) {
+            conectar.ConnectionString = DataConexion.cn;
+            SqlCommand cmd = new SqlCommand("ING_MATRICU", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@IDALU", SqlDbType.Int).Value = idalu;
+            cmd.Parameters.Add("@TURNO", SqlDbType.VarChar, 20).Value = turno;
+            cmd.Parameters.Add("@PERIODO", SqlDbType.VarChar, 15).Value = periodo;
+            cmd.Parameters.Add("@IDSECCION", SqlDbType.Int).Value = id_seccion;
+            cmd.Parameters.Add("@IDCICLO", SqlDbType.Int).Value = id_ciclo;
+            cmd.Parameters.Add("@FECHA", SqlDbType.Date).Value = fecha;
             try {
                 conectar.Open();
                 cmd.ExecuteNonQuery();

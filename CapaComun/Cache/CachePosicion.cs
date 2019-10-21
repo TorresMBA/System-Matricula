@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CapaComun.Cache {
     public class CachePosicion {
-        public const int Administrativo = 1;
-        public const int Docente = 2;
-        public const int Alumno = 3;
+        public const string Administrativo = "Administrativo";
+        public const string Docente = "Docente";
+        public const string Alumno = "Alumno";
     }
 }

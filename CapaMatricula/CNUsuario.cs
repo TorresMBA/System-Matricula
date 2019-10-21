@@ -11,5 +11,9 @@ namespace CapaNegocio {
         public DataTable ListarUsu() {
             return usu.ListarUsu();
         }
+
+        public string IngresarUsuario(string cod, string pass, string posicion) {
+            return usu.IngresarUsuario(cod, pass, posicion);
+        }
     }
 }

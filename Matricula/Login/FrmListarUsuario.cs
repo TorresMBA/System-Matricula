@@ -13,5 +13,9 @@ namespace Matricula.Login {
         public FrmListarUsuario() {
             InitializeComponent();
         }
+
+        private void BtnNuevo_Click(object sender, EventArgs e) {
+
+        }
     }
 }

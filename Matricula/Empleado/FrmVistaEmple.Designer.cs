@@ -178,7 +178,7 @@
             this.GridEmple.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridEmple.EnableHeadersVisualStyles = false;
             this.GridEmple.GridColor = System.Drawing.Color.SteelBlue;
-            this.GridEmple.Location = new System.Drawing.Point(4, 145);
+            this.GridEmple.Location = new System.Drawing.Point(29, 145);
             this.GridEmple.Name = "GridEmple";
             this.GridEmple.ReadOnly = true;
             this.GridEmple.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -198,7 +198,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.GridEmple.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridEmple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridEmple.Size = new System.Drawing.Size(911, 327);
+            this.GridEmple.Size = new System.Drawing.Size(864, 327);
             this.GridEmple.TabIndex = 11;
             this.GridEmple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAlum_CellContentClick);
             this.GridEmple.DoubleClick += new System.EventHandler(this.GridAlum_DoubleClick);

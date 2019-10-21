@@ -16,5 +16,22 @@ namespace CapaData {
             da.Fill(tb);
             return tb;
         }
+
+        public string IngresarUsuario(string cod, string pass, string posicion) {
+            conectar.ConnectionString = DataConexion.cn;
+            SqlCommand cmd = new SqlCommand("INSER_USU", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@COD", SqlDbType.VarChar, 10).Value = cod;
+            cmd.Parameters.Add("@PASS", SqlDbType.VarChar, 15).Value = pass;
+            cmd.Parameters.Add("@POSICION", SqlDbType.VarChar, 15).Value = posicion;
+            try {
+                conectar.Open();
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+                return "Todo ok";
+            } catch(Exception e) {
+                return e.Message;
+            }
+        }
     }
 }

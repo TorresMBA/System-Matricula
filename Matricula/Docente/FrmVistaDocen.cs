@@ -13,7 +13,7 @@ namespace Matricula.Docente {
         public FrmVistaDocen() {
             InitializeComponent();
         }
-        CapaNegocio.CNDocente obj = new CapaNegocio.CNDocente();
+        
 
         private void BtnMenu_Click(object sender, EventArgs e) {
             FrmListarDocen obj = new FrmListarDocen();
@@ -21,10 +21,12 @@ namespace Matricula.Docente {
         }
 
         private void FrmVistaDocen_Load(object sender, EventArgs e) {
+            CapaNegocio.CNDocente obj = new CapaNegocio.CNDocente();
             GridDocen.DataSource = obj.ListarDocen();
         }
 
         private void FrmVistaDocen_Activated(object sender, EventArgs e) {
+            CapaNegocio.CNDocente obj = new CapaNegocio.CNDocente();
             GridDocen.DataSource = obj.ListarDocen();
         }
 

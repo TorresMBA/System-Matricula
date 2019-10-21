@@ -53,16 +53,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnSuperior = new System.Windows.Forms.Panel();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnFoto = new System.Windows.Forms.Button();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.pnSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -113,13 +113,13 @@
             // 
             // cboCarrera
             // 
+            this.cboCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCarrera.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboCarrera.FormattingEnabled = true;
             this.cboCarrera.Location = new System.Drawing.Point(157, 376);
             this.cboCarrera.Name = "cboCarrera";
             this.cboCarrera.Size = new System.Drawing.Size(139, 25);
             this.cboCarrera.TabIndex = 23;
-            this.cboCarrera.Text = "Selecione...";
             // 
             // label12
             // 
@@ -133,13 +133,17 @@
             // 
             // cboApo
             // 
+            this.cboApo.DisplayMember = "Selecione...";
+            this.cboApo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboApo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboApo.FormattingEnabled = true;
+            this.cboApo.Items.AddRange(new object[] {
+            "Selecione..."});
             this.cboApo.Location = new System.Drawing.Point(527, 332);
             this.cboApo.Name = "cboApo";
             this.cboApo.Size = new System.Drawing.Size(139, 25);
             this.cboApo.TabIndex = 28;
-            this.cboApo.Text = "Selecione...";
+            this.cboApo.SelectedIndexChanged += new System.EventHandler(this.CboApo_SelectedIndexChanged);
             // 
             // lblOpe
             // 
@@ -193,13 +197,13 @@
             // 
             // cboDistrito
             // 
+            this.cboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistrito.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboDistrito.FormattingEnabled = true;
             this.cboDistrito.Location = new System.Drawing.Point(527, 276);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(139, 25);
             this.cboDistrito.TabIndex = 21;
-            this.cboDistrito.Text = "Selecione...";
             // 
             // txtDirrecion
             // 
@@ -231,6 +235,7 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
@@ -240,7 +245,6 @@
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(139, 25);
             this.cboSexo.TabIndex = 15;
-            this.cboSexo.Text = "Selecione...";
             // 
             // txtEmail
             // 
@@ -374,6 +378,29 @@
             this.pnSuperior.Size = new System.Drawing.Size(757, 146);
             this.pnSuperior.TabIndex = 4;
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.Gray;
+            this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
+            this.pbFoto.Location = new System.Drawing.Point(648, 3);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(106, 111);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 15;
+            this.pbFoto.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.BackColor = System.Drawing.Color.DarkGray;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoto.Location = new System.Drawing.Point(648, 120);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(106, 23);
+            this.btnFoto.TabIndex = 3;
+            this.btnFoto.Text = "Ingresar Foto";
+            this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -423,29 +450,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
-            // btnFoto
-            // 
-            this.btnFoto.BackColor = System.Drawing.Color.DarkGray;
-            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoto.Location = new System.Drawing.Point(648, 120);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(106, 23);
-            this.btnFoto.TabIndex = 3;
-            this.btnFoto.Text = "Ingresar Foto";
-            this.btnFoto.UseVisualStyleBackColor = false;
-            this.btnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.BackColor = System.Drawing.Color.White;
-            this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
-            this.pbFoto.Location = new System.Drawing.Point(648, 3);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(106, 111);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 15;
-            this.pbFoto.TabStop = false;
-            // 
             // FrmIEAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,8 +467,8 @@
             this.groupBox1.PerformLayout();
             this.pnSuperior.ResumeLayout(false);
             this.pnSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -25,7 +25,20 @@ namespace Matricula.Docente {
 
         private void BtnNuevo_Click(object sender, EventArgs e) {
             FrmIEDocente obj = new FrmIEDocente();
+            obj.lblOpe.Text = "Nuevo";
             obj.ShowDialog();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e) {
+            FrmIEDocente obj = new FrmIEDocente();
+            obj.lblCod.Text = GridDocen.CurrentRow.Cells[1].Value.ToString();
+            obj.lblOpe.Text = "Editar";
+            obj.ShowDialog();
+        }
+
+        private void FrmListarDocen_Activated(object sender, EventArgs e) {
+            CapaNegocio.CNDocente obj = new CapaNegocio.CNDocente();
+            GridDocen.DataSource = obj.ListarDocen();
         }
     }
 }

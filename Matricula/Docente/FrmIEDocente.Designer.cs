@@ -27,10 +27,19 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pnSuperior = new System.Windows.Forms.Panel();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtOpe = new System.Windows.Forms.Label();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblOpe = new System.Windows.Forms.Label();
             this.d = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,6 +62,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +73,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalir.Location = new System.Drawing.Point(437, 570);
+            this.btnSalir.Location = new System.Drawing.Point(437, 599);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(136, 30);
             this.btnSalir.TabIndex = 10;
@@ -77,25 +87,49 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(172, 570);
+            this.btnGuardar.Location = new System.Drawing.Point(172, 599);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(154, 30);
             this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Ingresar Detalles";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // pnSuperior
             // 
             this.pnSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pnSuperior.Controls.Add(this.pbFoto);
+            this.pnSuperior.Controls.Add(this.btnFoto);
             this.pnSuperior.Controls.Add(this.lblTitulo);
             this.pnSuperior.Controls.Add(this.pictureBox1);
             this.pnSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSuperior.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnSuperior.Name = "pnSuperior";
-            this.pnSuperior.Size = new System.Drawing.Size(757, 136);
+            this.pnSuperior.Size = new System.Drawing.Size(757, 147);
             this.pnSuperior.TabIndex = 8;
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.Gray;
+            this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
+            this.pbFoto.Location = new System.Drawing.Point(648, 3);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(106, 111);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 17;
+            this.pbFoto.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.BackColor = System.Drawing.Color.DarkGray;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoto.Location = new System.Drawing.Point(648, 120);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(106, 23);
+            this.btnFoto.TabIndex = 16;
+            this.btnFoto.Text = "Ingresar Foto";
+            this.btnFoto.UseVisualStyleBackColor = false;
             // 
             // lblTitulo
             // 
@@ -113,14 +147,21 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 133);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtOpe);
+            this.groupBox1.Controls.Add(this.txtArea);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.lblId);
+            this.groupBox1.Controls.Add(this.txtHora);
+            this.groupBox1.Controls.Add(this.txtSueldo);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblOpe);
             this.groupBox1.Controls.Add(this.d);
             this.groupBox1.Controls.Add(this.lblCod);
             this.groupBox1.Controls.Add(this.label11);
@@ -143,23 +184,86 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 153);
+            this.groupBox1.Location = new System.Drawing.Point(12, 163);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(733, 388);
+            this.groupBox1.Size = new System.Drawing.Size(733, 430);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // txtOpe
+            // txtArea
             // 
-            this.txtOpe.AutoSize = true;
-            this.txtOpe.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtOpe.Location = new System.Drawing.Point(523, 55);
-            this.txtOpe.Name = "txtOpe";
-            this.txtOpe.Size = new System.Drawing.Size(17, 23);
-            this.txtOpe.TabIndex = 25;
-            this.txtOpe.Text = "-";
+            this.txtArea.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtArea.Location = new System.Drawing.Point(315, 384);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(195, 27);
+            this.txtArea.TabIndex = 32;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label13.Location = new System.Drawing.Point(211, 387);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 21);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Area:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblId.Location = new System.Drawing.Point(279, 55);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(17, 23);
+            this.lblId.TabIndex = 30;
+            this.lblId.Text = "-";
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(600, 332);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(66, 32);
+            this.txtHora.TabIndex = 29;
+            // 
+            // txtSueldo
+            // 
+            this.txtSueldo.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtSueldo.Location = new System.Drawing.Point(451, 335);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(80, 27);
+            this.txtSueldo.TabIndex = 28;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label12.Location = new System.Drawing.Point(537, 337);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 21);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Horas:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label8.Location = new System.Drawing.Point(379, 337);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 21);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Sueldo:";
+            // 
+            // lblOpe
+            // 
+            this.lblOpe.AutoSize = true;
+            this.lblOpe.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblOpe.Location = new System.Drawing.Point(523, 55);
+            this.lblOpe.Name = "lblOpe";
+            this.lblOpe.Size = new System.Drawing.Size(17, 23);
+            this.lblOpe.TabIndex = 25;
+            this.lblOpe.Text = "-";
             // 
             // d
             // 
@@ -193,6 +297,7 @@
             // 
             // cboDistrito
             // 
+            this.cboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistrito.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboDistrito.FormattingEnabled = true;
             this.cboDistrito.Location = new System.Drawing.Point(527, 272);
@@ -230,6 +335,7 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
@@ -239,7 +345,6 @@
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(139, 29);
             this.cboSexo.TabIndex = 15;
-            this.cboSexo.Text = "Selecione...";
             // 
             // txtEmail
             // 
@@ -363,7 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 612);
+            this.ClientSize = new System.Drawing.Size(757, 636);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pnSuperior);
@@ -371,8 +476,10 @@
             this.Name = "FrmIEDocente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmIEDocente";
+            this.Load += new System.EventHandler(this.FrmIEDocente_Load);
             this.pnSuperior.ResumeLayout(false);
             this.pnSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -388,7 +495,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.Label txtOpe;
+        public System.Windows.Forms.Label lblOpe;
         private System.Windows.Forms.Label d;
         public System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label label11;
@@ -410,5 +517,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.TextBox txtSueldo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnFoto;
+        public System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.Label label13;
     }
 }

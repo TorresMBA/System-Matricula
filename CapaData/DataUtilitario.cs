@@ -17,7 +17,6 @@ namespace CapaData {
             da.Fill(tb);
             return tb;
         }
-
         public string BackUp(string db, string etiq, byte tipo) {
             conectar.ConnectionString = DataConexion.cn;
             SqlCommand cmd = new SqlCommand("COPIADB", conectar);
@@ -35,7 +34,7 @@ namespace CapaData {
             }
         }
 
-        public string Restaurar(string @bd, string @copia) {
+            public string Restaurar(string @bd, string @copia) {
             conectar.ConnectionString = DataConexion.cn;
             try {
                 SqlDataAdapter da = new SqlDataAdapter("RESTOREDB '" + @bd + "','" + @copia + "'", conectar);
